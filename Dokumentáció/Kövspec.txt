@@ -1,5 +1,6 @@
 Követelmény specifikáció
 1. Jelenlegi helyzet
+Sokféle webes kvízjátékokat megtekintettünk már, de semelyik sem nyerte el a tetszésünket, se frontend, se backend szintjén. Sajnos nem volt egyikben sem olyan lehetőség, hogy beregisztráljunk, és kövessük az elért teljesítményünket, elért pontjainkat. Emellett a weboldalalak designja se ütötte meg a mi elvárt minimum-szintünket.
 
 2. Vágyálomrendszer
 
