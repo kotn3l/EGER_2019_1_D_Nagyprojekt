@@ -1,5 +1,8 @@
 Funkcionális specifikáció
 1.Bevezetés
+Egy olyan alkalmazást fejlesztünk, amelynek egy ismert televíziós kvízjáték, műveltésgi vetélkedő adott alapot, ez nem más mint, a Legyen Ön is milliomos!
+A játék célja, hogy a tudásunkat megmérettetve egyre előbbré haladjunk a szinteken és egyre nehezebb kérdéseket kapjunk, amivel a kérdések is nehezednek, így a nyeremény amit a helyesen megválaszolt kérdések után kapunk is egyre több lesz.
+Ezt az alkalmazást webes felületre tervezzük, amihez bejelentkezés lesz szükséges, hogy a játékos lassa, hogy mennyi pontot ért el az adott játékban...
 
 2.Jelenlegi helyzet
 
