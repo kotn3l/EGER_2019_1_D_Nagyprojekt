@@ -1,6 +1,8 @@
 Követelmény specifikáció
 1. Jelenlegi helyzet
-Sokféle webes kvízjátékokat megtekintettünk már, de semelyik sem nyerte el a tetszésünket, se frontend, se backend szintjén. Sajnos nem volt egyikben sem olyan lehetőség, hogy beregisztráljunk, és kövessük az elért teljesítményünket, elért pontjainkat. Emellett a weboldalalak designja se ütötte meg a mi elvárt minimum-szintünket.
+Sokféle webes kvízjátékot megtekintettünk már, de semelyik nem nyerte el a tetszésünket. Egyikben nagyon szép a frontend, másikban viszont a backend az erős, de egyetlen egy olyat sem találtunk, amelyik mindkettőre hangsúlyt fektet.
+Sajnos a többségben nem volt olyan lehetőség, hogy beregisztráljunk; ez elsősorban azért lenne fontos, hogy kövessük az elért eredményünket, pontjainkat. Ahol volt erre lehetőség, sőt, kötelező volt, lényegében ez a funkció hasztalan volt. Nem találtunk semmiféle adatlapot, vagy valamiféle scoreboardot sem, úgy tűnt, hogy csak azért kellett a regisztráció, hogy elérjük az adott játékot, semmi másra. A kérdések is elég egyhangúak és könnyűek voltak, illetve a játék nem lett szintről szintre nehezebb. Habár hiába voltak egyszerűek a kérdések, a segítségek hiányát is észrevettük, ami például egy Legyen Ön is milliomos kvízjáték elengedhetetlen eleme.
+Emellett probléma volt néhol a weboldalak designja is; inkonzisztens színösszeállítás, néhol elcsúszott elemek. Egy-egy kép/logó sem volt a legjobb választás. (Nem átlátszó háttér, túlságosan tömörített etc.)
 
 2. Vágyálomrendszer
 
