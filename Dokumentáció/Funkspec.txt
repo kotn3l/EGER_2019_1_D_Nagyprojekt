@@ -10,6 +10,7 @@ A bejelentkezés azért lesz fontos mert a játékos így tudja majd nyomon köv
 2.Jelenlegi helyzet
 
 3.Vágyálom rendszer
+A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játékos tanítása. Több témakört is átfog a játék, például történelem, irodalom, ének-zene, földrajz, biológia. Minden kérdés megoldására maximum 1 perc áll rendelkezésre. Egy kérdéshez 4 válaszlehetőség tartozik, ebból kell kiválasztani a helyes megoldást. A kérdések nehézszégi szint szerint pontot érnek. A könnyű kérdés 100, a közepes 200, a nehéz 300 pontot ér. Hibás válasz esetén a kérdés értékének 150%-át veszítjük el. A rendszer tartalmaz toplistát, amellyel össze lehet hasonlítani a felhasználók teljesítményét. A rendszerhez tartozik admin felület, ahova bejelentkezve az adminisztrátonak lehetősége van felhasználókat tiltani, eredményeket törölni, illetve a kérdéseket kezelni. 
 
 4.Feltételek
 
