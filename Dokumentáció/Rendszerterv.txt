@@ -1,7 +1,15 @@
 Rendszerterv
 1.Rendszer célja
+	A rendszer célja a játékos tudásának felmérése, valamint annak fejlesztése.
+	Minde egyes jó válasz után a játékos a válasz nehézségétől függően pontot kap, amit a játék összesít és az elért eredmények megtekinthetőek egy 
+	toplisták fül segítségével. A toplista tárolása adatbázis segítségével történik.
+	A játék megkezdéséhez szükséges egy felhasználói fiók ami regisztráció segítségével hozható létre és az itt megadott adatokkal lehet bejelentkezni később.
+	A felhsaználóknak két kezelői szintje legyen, adminisztrátor és felhasználó. Az adminisztrátor bejelentkezéskor több felület jelenik meg a honlapon, mint a 
+	normál felhasználónak. Az admin írhat új kérdéseket a honlapra adatbázis segítségével, forráskód átdolgozása nélkül, illetve ha szükséges el tud távolítani felhasználókat
+	a regisztráltak listájából.
 
 2.Projekt terv
+	
 
 3.Üzleti folyamatok modellje
 
