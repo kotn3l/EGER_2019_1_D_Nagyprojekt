@@ -9,7 +9,15 @@ Rendszerterv
 	a regisztráltak listájából.
 
 2.Projekt terv
+	A projektet weblapra fejlesztük front- és backend segítségével. Az elkülönített feladatokon más-más emberek dolgoznak.
+	Frontend fejlesztése HTML/CSS segítségével, valamint bejelentkezéshez php használata adatbázis kezeléséhez.
+	Frontend felelősök:
 	
+	A feladat célja, hogy a weblap könnyen kezelhető legyen a felhasználók és adminisztrátorok számára. 
+	
+	Backend felelősök:
+
+	Feladatuk az adatbázishoz való csatlakozás biztosítása, illetve a benne kezelt műveletek megírása. 
 
 3.Üzleti folyamatok modellje
 

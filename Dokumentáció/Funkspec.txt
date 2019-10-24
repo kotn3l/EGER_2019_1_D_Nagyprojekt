@@ -4,6 +4,7 @@ Funkcionális specifikáció
 Egy olyan alkalmazást fejlesztünk, amelynek egy ismert televíziós kvízjáték, műveltségi vetélkedő adott alapot, ez nem más mint, a Legyen Ön is milliomos!
 Ennek az ismert játéknak az a célja, hogy tudásunkat megmérettetve egyre előbbré haladjunk a szinteken és ezzel együtt egyre nehezebb kérdéseket kapjunk.
 Mivel a kérdések is egyre nehezednek, így a nyeremény amit az egyes helyesen megválaszolt kérdések után kapunk is egyre több lesz, azaz míg az elején könnyű kérdéseket kapunk így egyértelműen kevesebb lesz a nyert összeg, de ahogy haladunk előre a kérdések is nehezednek és a nyert összegünk is egyre több lesz.
+Viszont van egy csavar a játékban, mivel ha rosszul válaszolunk az egyik kérdésre akkor az eddigi elért pontjainkból a kérdés nehézségétől függően pontot fogunk veszíteni.
 Ezt az műveltségi vetélkedőt webes felületre tervezzük, és ahhoz, hogy elérjük a Legyen Ön is milliomos! játékot, csak egy bejelentkezés lesz szükséges, azaz ingyenesen használható lesz.
 A bejelentkezés azért lesz fontos mert a játékos így tudja majd nyomon követni, hogy a kvízjátékban milyen eredményt ért el és mennyi pontot gyűjtött össze eddig.
 
