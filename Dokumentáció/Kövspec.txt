@@ -10,7 +10,7 @@ A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játé
 3. Szabványok/rendeletek
 
 4. Jelenlegi üzleti folyamatok modellje
-A 21. században az emberek egy része az internethez fordul ha unatkozik, hátha felfedez valamit, amivel lekötheti magát. Hiába sikerül találnuk valamit amivel elbíbelődhetünk, de a végén nem "nyertünk" belőle semmit, csak elvesztgetett időt. Jellemzően a keresgélés eredménye egy kvízjáték, ám ebből is ezer meg egy féle variáció létezik, amiknek legalább 80%-ából hiányzik az egyik legfontosabb; nem tanulunk belőlük.
+A 21. században az emberek egy része az internethez fordul ha unatkozik, hátha felfedez valamit, amivel lekötheti magát. Hiába sikerül találnunk valamit amivel elbíbelődhetünk, de a végén nem "nyertünk" belőle semmit, csak elvesztgetett időt. Jellemzően a keresgélés eredménye egy kvízjáték, ám ebből is ezer meg egy féle variáció létezik, amelyeknek legalább 80%-ából hiányzik az egyik legfontosabb; a tanítási szándék. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy toplistával, pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben lépünk be, és folytatjuk élretörésünket.
 
 5. Igényelt üzleti folyamatok modellje
 
