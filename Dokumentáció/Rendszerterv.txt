@@ -36,7 +36,11 @@ Rendszerterv
 10.Implementációs terv
 
 11.Tesztterv
+Az alkalmazás elkészítése során szükség van a folyamatos tesztelésre. 
+Tesztelni kell a gombok működését helyes illetve rossz válasz adása esetén. Jó válasz esetén a következő kérdés betöltését, rossz válasz esetén pedig a pontvesztést. Végigjátszás esetén az eredmény elmentését adatbázisba majd az új játék indításának lehetőségét. Tesztelni kell az adatbázis kapcsolatokat a kérdések betöltésénél, az eredménylista megjelenítésénél.
 
 12.Telepítési terv
+Szükségünk van egy MySQL-t futtató szerverre az adatbázishoz. Az alkalmazás futtatásához pedig egy általános felhasználású böngészőre van szükség.
 
 13.Karbantartási terv
+Az alkalmazás bővítési lehetőségét fenntartjuk. Kérdéseket lehet hozzáadni, törölni, módosítani az adatbázisban. 
