@@ -15,7 +15,8 @@ A 21. században az emberek egy része az internethez fordul ha unatkozik, háth
 5. Igényelt üzleti folyamatok modellje
 Szándékunk szerint a főoldalon egy bejelntkezési felülettel tudjuk elérni magát a kvízjátékot.
 Bejelentkezésünk után, egy olyan oldal fogad minket, ahol több lehetőség közül is választhatunk például: új játék indítása vagy a játékos eddig összegyűjtött pontjainak szemügyre vétele, illetve a globálisan más játékosok által elért toplista is.
-
+Új játék választása során a felhasználó fel lesz promptoltatva egy beállítás ablakkal, ahol az alapbeállítást kedve szerint módosíthatja: nehézségi szint, kérdés témakörök.
+A toplista választása esetén átjítelődünk egy másik oldalra, ahol szimplán a saját legjobb elért pontjainkat láthatjuk, vagy a másik tabot kiválasztva az összes eddigi játékos pontszámát is megtekinthetjük.
 
 
 6. Követelménylista
