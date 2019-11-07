@@ -22,13 +22,16 @@ Rendszerterv
 
 4.Követelmények
 	A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.
-	A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
-	bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a php/JavaScript-el.
 	A weboldal használatához egy egyszerű böngészőre van szükség.
 
 5.Funkcionális terv
 
 6.Fizikai környezet
+	A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.
+	A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
+	bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a php/JavaScript-el.
+	A weboldal használatához egy egyszerű böngészőre van szükség.
+	A rendszert bármilyen operációs rendszeren és böngészőben haszálható lesz, valamint telefonról is.
 
 7.Absztrakt domain modell
 
