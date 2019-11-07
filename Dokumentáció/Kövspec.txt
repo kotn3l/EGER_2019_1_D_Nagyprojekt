@@ -19,7 +19,10 @@ Bejelentkezésünk után, egy olyan oldal fogad minket, ahol több lehetőség k
 A toplista választása esetén átjítelődünk egy másik oldalra, ahol szimplán a saját legjobb elért pontjainkat láthatjuk, vagy a másik tabot kiválasztva az összes eddigi játékos pontszámát is megtekinthetjük.
 A játékmenet körökből áll, amely körönként egy adott tematikán belül kapunk egy kérdést, és hozzá 4 válaszlehetőséget, ahol ki kell választanunk az általunk gondolt helyes megoldást. Rossz válasz esetén az eddig elért pontjainkból levonásra kerül a kérdés nehézségi szintje szerinti másfeles (150%) szorzó.
 Válaszadás közben, ha nehézségekbe ütközünk használatba vehetjük három segítségünk közül az egyiket. A segítségek mindegyike az egész játék alatt csak egyszer használható fel, illetve egy kérdéshez csak egy segítség vehető igénybe.
-
+A játéknak vége van, ha:
+-0 pont alá csökkenne a pontszám
+-30 kérdést elérjük
+Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítségével visszaugorhatunk a főoldalra (új játék és pontok menü).
 
 6. Követelménylista
 
