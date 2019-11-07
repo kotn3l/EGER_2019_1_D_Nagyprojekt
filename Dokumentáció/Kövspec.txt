@@ -13,6 +13,11 @@ A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játé
 A 21. században az emberek egy része az internethez fordul ha unatkozik, hátha felfedez valamit, amivel lekötheti magát. Hiába sikerül találnunk valamit amivel elbíbelődhetünk, de a végén nem "nyertünk" belőle semmit, csak elvesztgetett időt. Jellemzően a keresgélés eredménye egy kvízjáték, ám ebből is ezer meg egy féle variáció létezik, amelyeknek legalább 80%-ából hiányzik az egyik legfontosabb; a tanítási szándék. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy toplistával, pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben lépünk be, és folytatjuk élretörésünket.
 
 5. Igényelt üzleti folyamatok modellje
+Szándékunk szerint a főoldalon egy bejelntkezési felülettel tudjuk elérni magát a kvízjátékot.
+Bejelentkezésünk után, egy olyan oldal fogad minket, ahol több lehetőség közül is választhatunk például: új játék indítása vagy a játékos eddig összegyűjtött pontjainak szemügyre vétele, illetve a globálisan más játékosok által elért toplista is.
+Új játék választása során a felhasználó fel lesz promptoltatva egy beállítás ablakkal, ahol az alapbeállítást kedve szerint módosíthatja: nehézségi szint, kérdés témakörök.
+A toplista választása esetén átjítelődünk egy másik oldalra, ahol szimplán a saját legjobb elért pontjainkat láthatjuk, vagy a másik tabot kiválasztva az összes eddigi játékos pontszámát is megtekinthetjük.
+
 
 6. Követelménylista
 
