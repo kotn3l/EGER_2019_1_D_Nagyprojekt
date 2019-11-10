@@ -28,6 +28,17 @@ Rendszerterv
 	A weboldal használatához egy egyszerű böngészőre van szükség.
 
 5.Funkcionális terv
+	Menühierarchia:
+		BEJELENTKEZÉS
+			Bejelentkezés
+			Regisztráció
+		FŐOLDAL
+			Új játék
+				Nehézségi szint
+				Témakörök választása
+			Toplista
+				Elért pontjaim
+				Globális toplista
 
 6.Fizikai környezet
 	A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.
