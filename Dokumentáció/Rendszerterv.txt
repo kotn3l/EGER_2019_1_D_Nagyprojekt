@@ -21,6 +21,8 @@ Rendszerterv
 
 3.Üzleti folyamatok modellje
 
+
+
 4.Követelmények
 	A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.
 	A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
@@ -28,6 +30,22 @@ Rendszerterv
 	A weboldal használatához egy egyszerű böngészőre van szükség.
 
 5.Funkcionális terv
+
+Rendszerszereplő
+-Játékos
+Mivel a játékon belül nem tudunk és értelme sincs más rendzserszereplőt kiválasztani, például egy admint, így az egyetlen szereplő csak a játékos lehet, ezért csak egy féle képpen lehet majd használni az adott rendszert.
+
+Rendszerhasználati eset és lefutása
+-Játékos
+	-> Kötelező számára a Regisztráció csak így tud majd játszani
+	-> Regisztráció után bármikor beléphet a megadott nevével és jelszavával
+	-> Bármikor kezdhet Új játékot ha már végzett vagy elveszitett egy előzőt
+	-> Kiválaszthatja az Új játéknak a Nehézségi szintjét
+	-> Kiválaszthatja az Új játéknak a Témakörét amiben játszani akar
+	-> Megtekintheti a Toplista menüpontban az eddig elért saját pontjait
+	-> Megtekintheti a többi játékos által elért pontokat,
+		 azaz a Globális toplistát
+
 	Menühierarchia:
 		BEJELENTKEZÉS
 			Bejelentkezés
