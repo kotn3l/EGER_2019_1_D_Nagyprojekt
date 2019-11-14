@@ -68,6 +68,10 @@ Rendszerhasználati eset és lefutása
 7.Absztrakt domain modell
 
 8.Architekturális terv
+A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben
+MySql-t használunk. A kliens oldali programokat egy php alapú REST api
+szolgálja ki, ez csatlakozik az adatbázis szerverhez. A kliensekkel JSON
+objektumokkal kommunikál.
 
 9.Adatbázis terv
 Szükségünk van két adatbázisra. Az egyikben eltároljuk a kérdéseket a hozzá tartozó válaszlehetőségekkel és a helyes válasz betűjelével. 
