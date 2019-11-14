@@ -28,7 +28,7 @@ Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítség
 6. Követelménylista
 
 7. Irányított és szabad szöveges riportok
--
+--
 
 8. Fogalomszótár
 
