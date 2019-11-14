@@ -24,7 +24,7 @@ Manapság az emberek ha unatkoznak az internethez fordulnak "segítségért", ho
 
 6.Igényelt üzleti folyamatok modellje
 Azért hogy, az emberek szórakozva, de mégis hasznosan töltsék az idejüket egy programot hoztunk létre amivel játszva lehet tanulni és fejleszteni lehet tudásunkat. Az egyszerű kérdésektől fogva a nehezebb kérdésekig minden féle témából például Biológiából, Földrajzból, Irodalomból, Gasztronómiából és még nagyon sok másból megméretetthetjük tudásunkat.
-
+Amikor már túl egyszerűnek tűnnek a kérdések, a nehézségi szintet kedvünk szerint állíthatjuk. Ezzel ellentétben, ha a kérdések kifognak rajtunk, használatba vehetjük a 3 segítségünk egyikét: válaszok felezése, telefonos segítség, illetve a közönség véleménye.
 
 7.Használati esetek
 
