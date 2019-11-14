@@ -1,0 +1,28 @@
+CREATE TABLE campuses(
+	id INT NOT NULL AUTO_INCREMENT, 
+    name VARCHAR(250) NOT NULL, 
+    
+    CONSTRAINT PK_campuses PRIMARY KEY(id)
+);
+
+INSERT INTO campuses(name)
+VALUES ('Egri campus');
+INSERT INTO campuses(name)
+VALUES ('Gyöngyösi campus');
+
+select * from campuses;
+
+CREATE TABLE buildings(
+	id INT NOT NULL AUTO_INCREMENT, 
+    code VARCHAR(5) NOT NULL, 
+    name VARCHAR(250) NOT NULL, 
+    campus_id INT NOT NULL, 
+    
+    CONSTRAINT PK_buildings PRIMARY KEY(id),
+    CONSTRAINT UQ_buildings_code UNIQUE(code),
+    CONSTRAINT FK_buildings_campus_id FOREIGN KEY (campus_id)
+    REFERENCES campuses(id)
+    
+);
+insert into buildings(code, name, campus_id)
+values('A','A épület',1);
