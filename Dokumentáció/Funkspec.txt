@@ -23,6 +23,8 @@ A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játé
 Manapság az emberek ha unatkoznak az internethez fordulnak "segítségért", hogy leköthessék valahogy magukat. Mivel sokféle kvízjáték található, ezért javarészt egy ilyesmivel töltjük el időnket. Sajnos legtöbbjük egyáltalán nem a szabványos kvízjáték elveket követik; nem tanulhatunk belőlük semmi újat, illetve nem igényelnek semmiféle tudást. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben folytatjuk előretörésünket.
 
 6.Igényelt üzleti folyamatok modellje
+Azért hogy, az emberek szórakozva, de mégis hasznosan töltsék az idejüket egy programot hoztunk létre amivel játszva lehet tanulni és fejleszteni lehet tudásunkat. Az egyszerű kérdésektől fogva a nehezebb kérdésekig minden féle témából például Biológiából, Földrajzból, Irodalomból, Gasztronómiából és még nagyon sok másból megméretetthetjük tudásunkat.
+
 
 7.Használati esetek
 
