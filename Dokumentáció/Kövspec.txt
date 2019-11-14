@@ -31,4 +31,4 @@ Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítség
 -
 
 8. Fogalomszótár
-
+Toplista - A játékban résztvevő játékosok pontszámai alapján történő rangsorba sorolása.
