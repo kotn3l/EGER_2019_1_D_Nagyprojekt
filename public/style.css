@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat Alternates');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body {
     margin: 0px;
     padding: 0px;
     width: 100%;
     height: 100%;
-    font-family: 'Montserrat Alternates';
+    font-family: 'Roboto';
     background-color: rgb(30, 30, 30);
 }
-ol{
+
+ol
+{
     margin-left: 15%;
     margin-right: 15%;
 }
+
 ul 
 {
     list-style-type: none;
@@ -19,19 +22,27 @@ ul
     padding: 0;
     overflow: hidden;
     background-color: rgb(200,200,200);
-  }
-p{
+}
+
+p
+{
 	text-align: justify;
 	font-size: 110%;
 }
-li{
+
+li
+{
 	font-size: 110%;
 }
-h3{
+
+h3
+{
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-.content{
+
+.content
+{
 	margin-left: 0%;
 	margin-right: 0%;
 	background-color: rgb(200,200,200);
@@ -41,17 +52,23 @@ h3{
 	padding-top: 5px;
 	border-radius: 10px;
 }
-h1{
+
+h1
+{
 	text-align: center;
 	color: rgb(200,200,200);
 }
-img{
+
+img
+{
 
 }
+
 .right
 {
     float: right;
 }
+
 .left
 {
     float: left;
