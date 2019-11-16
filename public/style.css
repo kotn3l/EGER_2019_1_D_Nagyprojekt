@@ -67,9 +67,18 @@ img
 .right
 {
     float: right;
+    padding-right: 25px;
 }
 
 .left
 {
     float: left;
+    padding-left: 25px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+	text-decoration: underline;
 }
