@@ -1,40 +1,150 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html name="top" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+    <ul>
+            <li><a class="left" href="kovetelmenyspec.html" >Követelmény specifikáció</a></li>
+            <li><a class="right" href="funkcionalisspec.html" >Funkcionális specifikáció</a></li>
+    </ul>
+    
     <title>Rendszerterv</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-      <h1>Rendszerterv</h1>
+      <h1 style="text-align: center">Rendszerterv</h1>
+
       <ol>
+
+        <div class="content">
         <h3><li>Rendszer célja</li></h3>
-            <p>A rendszer célja a játékos tudásának felmérése, valamint annak fejlesztése.
-	Minde egyes jó válasz után a játékos a válasz nehézségétől függően pontot kap, amit a játék összesít és az elért eredmények megtekinthetőek egy
-	toplisták fül segítségével. A toplista tárolása adatbázis segítségével történik.
-	A játék megkezdéséhez szükséges egy felhasználói fiók ami regisztráció segítségével hozható létre és az itt megadott adatokkal lehet bejelentkezni később.
-	A felhsaználóknak két kezelői szintje legyen, adminisztrátor és felhasználó. Az adminisztrátor bejelentkezéskor több felület jelenik meg a honlapon, mint a
-	normál felhasználónak. Az admin írhat új kérdéseket a honlapra adatbázis segítségével, forráskód átdolgozása nélkül, illetve ha szükséges el tud távolítani felhasználókat
-	a regisztráltak listájából.</p>
+            <p>A rendszer célja a játékos tudásának felmérése, valamint annak fejlesztése.<br>
+                Minden egyes jó válasz után a játékos a válasz nehézségétől függően pontot kap, amit a játék összesít és az elért eredmények megtekinthetőek egy
+              	toplisták fül segítségével. A toplista tárolása adatbázis segítségével történik.<br><br>
+              	A játék megkezdéséhez szükséges egy felhasználói fiók ami regisztráció segítségével hozható létre és az itt megadott adatokkal lehet bejelentkezni később.
+              	A felhsaználóknak két kezelői szintje legyen, adminisztrátor és felhasználó. Az adminisztrátor bejelentkezéskor több felület jelenik meg a honlapon, mint a
+              	normál felhasználónak.<br>Az admin írhat új kérdéseket a honlapra adatbázis segítségével, forráskód átdolgozása nélkül, illetve ha szükséges el tud távolítani felhasználókat
+              	a regisztráltak listájából.</p>
+                </div><br><br>
+
+        <div class="content">
+
         <h3><li>Projekt terv</li></h3>
             <p>A projektet weblapra fejlesztük front- és backend segítségével. Az elkülönített feladatokon más-más emberek dolgoznak.
-	Frontend fejlesztése HTML/CSS segítségével, valamint bejelentkezéshez php használata adatbázis kezeléséhez.
-	Frontend felelősök:
+            	Frontend fejlesztése HTML/CSS segítségével, valamint bejelentkezéshez php használata adatbázis kezeléséhez.<br>
+            	Frontend felelősök:<br><br>
 
-	A feladat célja, hogy a weblap könnyen kezelhető legyen a felhasználók és adminisztrátorok számára.
+            	A feladat célja, hogy a weblap könnyen kezelhető legyen a felhasználók és adminisztrátorok számára.<br>
 
-	Backend felelősök:
+            	Backend felelősök:<br><br>
 
-	Feladatuk az adatbázishoz való csatlakozás biztosítása, illetve a benne kezelt műveletek megírása. </p>
+            	Feladatuk az adatbázishoz való csatlakozás biztosítása, illetve a benne kezelt műveletek megírása. </p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Üzleti folyamatok modellje</li></h3>
+          <p><img src="img/uzleti_foly_model.png"></p>
+          </div><br><br>
+
+        <div class="content">
+
         <h3><li>Követelmények</li></h3>
+          <p>A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.<br>
+              A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
+              bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a php/JavaScript-el.<br>
+              A weboldal használatához egy egyszerű böngészőre van szükség.</p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Funkcionális terv</li></h3>
+          <p><h4>Rendszerszereplő</h4>
+              <p>
+                <img src="img/jatekos.png">
+              </p>
+              <br><br>
+
+              <h4>Rendszerhasználati eset és lefutása</h4>
+              <p>
+                <img src="img/jatekosleiras.png">
+              </p>
+
+              <br><br>
+
+                <h4>Menühierarchia:</h4>
+              <p><img src="img/menuhierarchia.png"></p>
+
+              </p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Fizikai környezet</li></h3>
+          <p> A rendszer fejlesztése HTML/CSS valamint JavaScript és php segítségével történik.
+              A weblap felépítése, valamint dizájnolása a HTML/CSS nyelv implementálásával valósítandó meg. Az adatbázishoz csatlakozás,
+              bejelentkezés, adminisztrátori jogosultság felismertetése, stb. pedig a php/JavaScript-el.
+              A weboldal használatához egy egyszerű böngészőre van szükség.
+              A rendszert bármilyen operációs rendszeren és böngészőben haszálható lesz, valamint telefonról is.</p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Absztrakt domain modell</li></h3>
+        </div><br><br>
+
+        <div class="content">
+
         <h3><li>Architekturális terv</li></h3>
+          <p>A rendszerhez szükség van egy adatbázis szerverre, ebben az esetben
+              MySql-t használunk. A kliens oldali programokat egy php alapú REST api
+              szolgálja ki, ez csatlakozik az adatbázis szerverhez. A kliensekkel JSON
+              objektumokkal kommunikál.</p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Adatbázis terv</li></h3>
+          <p>Szükségünk van két adatbázisra. Az egyikben eltároljuk a kérdéseket a hozzá tartozó válaszlehetőségekkel és a helyes válasz betűjelével. 
+              A másik adatbázisban tároljuk a játékosok nevét illetve az elért pontszámukat. </p>
+              </div><br><br>
+
+        <div class="content">
+
         <h3><li>Implementációs terv</li></h3>
+        </div><br><br>
 
+        <div class="content">
 
+        <h3><li>Teszt terv</li></h3>
+          <p>Az alkalmazás elkészítése során szükség van a folyamatos tesztelésre. 
+Tesztelni kell a gombok működését helyes illetve rossz válasz adása esetén. Jó válasz esetén a következő kérdés betöltését, rossz válasz esetén pedig a pontvesztést. Végigjátszás esetén az eredmény elmentését adatbázisba majd az új játék indításának lehetőségét. Tesztelni kell az adatbázis kapcsolatokat a kérdések betöltésénél, az eredménylista megjelenítésénél.</p>
+</div><br><br>
+
+        <div class="content">
+
+        <h3><li>Telepítési terv</li></h3>
+          <p>Szükségünk van egy MySQL-t futtató szerverre az adatbázishoz. Az alkalmazás futtatásához pedig egy általános felhasználású böngészőre van szükség. </p>
+          </div><br><br>
+
+        <div class="content">
+
+        <h3><li>Karbantartási terv</li></h3>
+          <p>Az alkalmazás bővítési lehetőségét fenntartjuk. Kérdéseket lehet hozzáadni, törölni, módosítani az adatbázisban. </p>
+          </div><br><br>
+ 
+    <center>                  
+          <div class="center">
+            <a href="#top">
+              <ul>
+                <p>               
+                    Vissza a tetejére
+                </p>
+              </ul>
+            </a> 
+          </div>           
+    </center>
+    
       </ol>
 
   </body>

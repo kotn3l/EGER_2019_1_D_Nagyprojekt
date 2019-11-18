@@ -23,8 +23,10 @@ A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játé
 Manapság az emberek ha unatkoznak az internethez fordulnak "segítségért", hogy leköthessék valahogy magukat. Mivel sokféle kvízjáték található, ezért javarészt egy ilyesmivel töltjük el időnket. Sajnos legtöbbjük egyáltalán nem a szabványos kvízjáték elveket követik; nem tanulhatunk belőlük semmi újat, illetve nem igényelnek semmiféle tudást. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben folytatjuk előretörésünket.
 
 6.Igényelt üzleti folyamatok modellje
-Azért hogy, az emberek szórakozva, de mégis hasznosan töltsék az idejüket egy programot hoztunk létre amivel játszva lehet tanulni és fejleszteni lehet tudásunkat. Az egyszerű kérdésektől fogva a nehezebb kérdésekig minden féle témából például Biológiából, Földrajzból, Irodalomból, Gasztronómiából és még nagyon sok másból megméretetthetjük tudásunkat.
+Azért hogy, az emberek szórakozva, de mégis hasznosan töltsék az idejüket egy programot hoztunk létre amivel játszva lehet tanulni és ezzel egyben fejleszteni is lehet tudásunkat.
+Az egyszerű kérdésektől fogva a nehezebb kérdésekig minden féle témából például Biológiából, Földrajzból, Irodalomból, Gasztronómiából és még nagyon sok másból választhatunk és megméretetthetjük tudásunkat.
 Amikor már túl egyszerűnek tűnnek a kérdések, a nehézségi szintet kedvünk szerint állíthatjuk. Ezzel ellentétben, ha a kérdések kifognak rajtunk, használatba vehetjük a 3 segítségünk egyikét: válaszok felezése, telefonos segítség, illetve a közönség véleménye.
+Ahhoz, hogy tudjuk hogy, hogyan állunk jelenleg a játékunkban arra is lesz lehetőségünk, hogy a toplista menüpont alatt megnézzük a saját pontjainkat amiket eddig a játékban elértünk és megszereztünk, pluszban megtekinthetjük azokat a pontokat is, amiket a többiek eddig elértek a játékuk során, azaz egy globális toplistát is láthatunk amihez mindenki hozzáfér és szabadon láthatja. 
 
 7.Használati esetek
 

@@ -1,41 +1,75 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html name="top" lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+
+    <ul>
+            <li><a class="left" href="funkcionalisspec.html" >Funkcionális specifikáció</a></li>
+            <li><a class="right" href="rendszerterv.html" >Rendszervterv</a></li>
+    </ul>
+
     <title>Követelmény specifikáció</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1 sytle="text-align:center;">Követelmény specifikáció</h1>
+    <h1>Követelmény specifikáció</h1>
     <ol>
+      <div class="content">
       <h3><li>Jelenlegi helyzet leírása:</li></h3>
-          <p>Sokféle webes kvízjátékot megtekintettünk már, de semelyik nem nyerte el a tetszésünket. Egyikben nagyon szép a frontend, másikban viszont a backend az erős, de egyetlen egy olyat sem találtunk, amelyik mindkettőre hangsúlyt fektet.
-          Sajnos a többségben nem volt olyan lehetőség, hogy beregisztráljunk; ez elsősorban azért lenne fontos, hogy kövessük az elért eredményünket, pontjainkat. Ahol volt erre lehetőség, sőt, kötelező volt, lényegében ez a funkció hasztalan volt. Nem találtunk semmiféle adatlapot, vagy valamiféle scoreboardot sem, úgy tűnt, hogy csak azért kellett a regisztráció, hogy elérjük az adott játékot, semmi másra. A kérdések is elég egyhangúak és könnyűek voltak, illetve a játék nem lett szintről szintre nehezebb. Habár hiába voltak egyszerűek a kérdések, a segítségek hiányát is észrevettük, ami például egy Legyen Ön is milliomos kvízjáték elengedhetetlen eleme.
-          Emellett probléma volt néhol a weboldalak designja is; inkonzisztens színösszeállítás, néhol elcsúszott elemek. Egy-egy kép/logó sem volt a legjobb választás. (Nem átlátszó háttér, túlságosan tömörített etc.)
+          <p>Sokféle webes kvízjátékot megtekintettünk már, de semelyik nem nyerte el a tetszésünket. Egyikben nagyon szép a frontend, másikban viszont a backend az erős, de egyetlen egy olyat sem találtunk, amelyik mindkettőre hangsúlyt fektet.<br><br>
+          Sajnos a többségben nem volt olyan lehetőség, hogy beregisztráljunk; ez elsősorban azért lenne fontos, hogy kövessük az elért eredményünket, pontjainkat. Ahol volt erre lehetőség, sőt, kötelező volt, lényegében ez a funkció hasztalan volt. Nem találtunk semmiféle adatlapot, vagy valamiféle scoreboardot sem, úgy tűnt, hogy csak azért kellett a regisztráció, hogy elérjük az adott játékot, semmi másra. A kérdések is elég egyhangúak és könnyűek voltak, illetve a játék nem lett szintről szintre nehezebb. Habár hiába voltak egyszerűek a kérdések, a segítségek hiányát is észrevettük, ami például egy Legyen Ön is milliomos kvízjáték elengedhetetlen eleme.<br><br>
+          Emellett probléma volt néhol a weboldalak designja is; inkonzisztens színösszeállítás, néhol elcsúszott elemek. Egy-egy kép/logó sem volt a legjobb választás. (Nem átlátszó háttér, túlságosan tömörített etc.)<br>
           </p>
+          </div><br><br>
+        <div class="content">
       <h3><li>Vágyálom rendszer leírása:</li></h3>
-          <p>A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játékos tanítása. Több témakört is átfog a játék, például történelem, irodalom, ének-zene, földrajz, biológia. Minden kérdés megoldására maximum 1 perc áll rendelkezésre. Egy kérdéshez 4 válaszlehetőség tartozik, ebból kell kiválasztani a helyes megoldást. A kérdések nehézszégi szint szerint pontot érnek. A könnyű kérdés 100, a közepes 200, a nehéz 300 pontot ér. Hibás válasz esetén a kérdés értékének 150%-át veszítjük el. A rendszer tartalmaz toplistát, amellyel össze lehet hasonlítani a felhasználók teljesítményét. A rendszerhez tartozik admin felület, ahova bejelentkezve az adminisztrátonak lehetősége van felhasználókat tiltani, eredményeket törölni, illetve a kérdéseket kezelni.
+          <p>A projekt egy logikai alapú alkalmazás, melynek célja a felhasználók játékos tanítása. Több témakört is átfog a játék, például történelem, irodalom, ének-zene, földrajz, biológia. Minden kérdés megoldására maximum 1 perc áll rendelkezésre. Egy kérdéshez 4 válaszlehetőség tartozik, ebból kell kiválasztani a helyes megoldást. A kérdések nehézszégi szint szerint pontot érnek.<br><br>A könnyű kérdés 100, a közepes 200, a nehéz 300 pontot ér. Hibás válasz esetén a kérdés értékének 150%-át veszítjük el. A rendszer tartalmaz toplistát, amellyel össze lehet hasonlítani a felhasználók teljesítményét. A rendszerhez tartozik admin felület, ahova bejelentkezve az adminisztrátonak lehetősége van felhasználókat tiltani, eredményeket törölni, illetve a kérdéseket kezelni.<br>
 
           </p>
+          </div><br><br>
+        <div class="content">
       <h3><li>Jelenlegi üzleti folyamatok modellje:</li></h3>
-		<p>
-			A 21. században az emberek egy része az internethez fordul ha unatkozik, hátha felfedez valamit, amivel lekötheti magát. Hiába sikerül találnunk valamit amivel elbíbelődhetünk, de a végén nem "nyertünk" belőle semmit, csak elvesztgetett időt. Jellemzően a keresgélés eredménye egy kvízjáték, ám ebből is ezer meg egy féle variáció létezik, amelyeknek legalább 80%-ából hiányzik az egyik legfontosabb; a tanítási szándék. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy toplistával, pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben lépünk be, és folytatjuk élretörésünket.
-		</p>
+    		<p>
+    			A 21. században az emberek egy része az internethez fordul ha unatkozik, hátha felfedez valamit, amivel lekötheti magát. Hiába sikerül találnunk valamit amivel elbíbelődhetünk, de a végén nem "nyertünk" belőle semmit, csak elvesztgetett időt.<br><br>Jellemzően a keresgélés eredménye egy kvízjáték, ám ebből is ezer meg egy féle variáció létezik, amelyeknek legalább 80%-ából hiányzik az egyik legfontosabb; a tanítási szándék. Másik probléma az, hogy hamar megununk dolgokat; ez egyrészt annak eredménye, hogy a játék nem tartja bennünk a motivációt például egy toplistával, pontozórendszerrel, ami késztetne minket arra, hogy jobban teljesítsünk. Másrészt ha olyan kérdéseket kapunk olyan témákból amik érdekelnek is minket, máris szívesebben lépünk be, és folytatjuk élretörésünket.<br>
+    		</p>
+        </div><br><br>
+        <div class="content">
       <h3><li>Igényelt üzleti folyamatok modellje:</li></h3>
-		<p>
-			Szándékunk szerint a főoldalon egy bejelntkezési felülettel tudjuk elérni magát a kvízjátékot.
-			Bejelentkezésünk után, egy olyan oldal fogad minket, ahol több lehetőség közül is választhatunk például: új játék indítása vagy a játékos eddig összegyűjtött pontjainak szemügyre vétele, illetve a globálisan más játékosok által elért toplista is.
-			Új játék választása során a felhasználó fel lesz promptoltatva egy beállítás ablakkal, ahol az alapbeállítást kedve szerint módosíthatja: nehézségi szint, kérdés témakörök.
-			A toplista választása esetén átjítelődünk egy másik oldalra, ahol szimplán a saját legjobb elért pontjainkat láthatjuk, vagy a másik tabot kiválasztva az összes eddigi játékos pontszámát is megtekinthetjük.
-			A játékmenet körökből áll, amely körönként egy adott tematikán belül kapunk egy kérdést, és hozzá 4 válaszlehetőséget, ahol ki kell választanunk az általunk gondolt helyes megoldást. Rossz válasz esetén az eddig elért pontjainkból levonásra kerül a kérdés nehézségi szintje szerinti másfeles (150%) szorzó.
-			Válaszadás közben, ha nehézségekbe ütközünk használatba vehetjük három segítségünk közül az egyiket. A segítségek mindegyike az egész játék alatt csak egyszer használható fel, illetve egy kérdéshez csak egy segítség vehető igénybe.
-			A játéknak vége van, ha:
-			-0 pont alá csökkenne a pontszám
-			-30 kérdést elérjük
-			Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítségével visszaugorhatunk a főoldalra (új játék és pontok menü).
-		</p>
+    		<p>
+    			Szándékunk szerint a főoldalon egy bejelntkezési felülettel tudjuk elérni magát a kvízjátékot.
+    			Bejelentkezésünk után, egy olyan oldal fogad minket, ahol több lehetőség közül is választhatunk például: új játék indítása vagy a játékos eddig összegyűjtött pontjainak szemügyre vétele, illetve a globálisan más játékosok által elért toplista is.<br>
+    			Új játék választása során a felhasználó fel lesz promptoltatva egy beállítás ablakkal, ahol az alapbeállítást kedve szerint módosíthatja: nehézségi szint, kérdés témakörök.
+    			A toplista választása esetén átjítelődünk egy másik oldalra, ahol szimplán a saját legjobb elért pontjainkat láthatjuk, vagy a másik tabot kiválasztva az összes eddigi játékos pontszámát is megtekinthetjük.<br><br>
+    			A játékmenet körökből áll, amely körönként egy adott tematikán belül kapunk egy kérdést, és hozzá 4 válaszlehetőséget, ahol ki kell választanunk az általunk gondolt helyes megoldást. Rossz válasz esetén az eddig elért pontjainkból levonásra kerül a kérdés nehézségi szintje szerinti másfeles (150%) szorzó.
+    			Válaszadás közben, ha nehézségekbe ütközünk használatba vehetjük három segítségünk közül az egyiket. A segítségek mindegyike az egész játék alatt csak egyszer használható fel, illetve egy kérdéshez csak egy segítség vehető igénybe.<br><br>
+    			A játéknak vége van, ha:<br>
+    			-0 pont alá csökkenne a pontszám<br>
+    			-30 kérdést elérjük<br><br>
+    			Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítségével visszaugorhatunk a főoldalra (új játék és pontok menü).<br>
+    		</p>
+        </div><br><br>
+        <div class="content">
       <h3><li>Követelménylista:</li></h3>
-      <h3><li>Irányított és szabad szöveges riportok szövege:</li></h3>
+      </div><br><br>
+        <div class="content">
       <h3><li>Fogalomszótár:</li></h3>
+        <p>
+          Toplista - A játékban résztvevő játékosok pontszámai alapján történő rangsorba sorolása.
+        </p>
+        </div><br><br>
+
+    <center>        
+          <div class="center">
+            <ul>
+                <p>
+                <a href="#top">                 
+                    Vissza a tetejére
+                </a>
+                </p>
+            </ul>
+          </div>
+    </center>
+        
     </ol>
 
   </body>
