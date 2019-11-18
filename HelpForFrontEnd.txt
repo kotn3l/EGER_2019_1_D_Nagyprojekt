@@ -1,0 +1,17 @@
+Ez a txt CSAK a Front End-en dolgozók segítségére készül.
+Bármilyen további kérdés merül fel Facen keressetek meg, amint tudok válaszolok. Akinek esetleg nem lennék ismerősei
+között a közösségi oldalon annak: https://www.facebook.com/bozotamasdani nyugodtan jelöljetek be.
+
+Minden egyes alkalommal, amikor új oldalt hozunk létre a "header" és "footer" állományokban található kódot egyszerűen CTRL+C és CTRL+V
+használatával teljes mértékben használhatjuk.
+A "footer" kódjában nem kell semmit változtatni, ugyanis minden teljesen működőképes, valamint az esetleges beállításokat
+az összes oldal elkészülte után én megírom.
+A "headerben" a <li> jelzésű részeknél a menüsáv elemeit kell megadni. (amennyiben nem tudjátok egyedül megoldani egy már kész headerrel
+rendelkező oldalról(team.html / info.html) le tudjátok nézni, hogy milyen részeket kell tartalmaznia)
+A menüsávnak be kell állítani az elemekt aktív jellegét, illetve azt, hogy melyik oldalt szeretnék vele meghivatkozni.
+Egyenlőre a "header" és a "footer" közé egy <section> jelzésű elemrészt hozzatok létre, amihez megintcsak lehet használni már a kész
+oldalakon lévőt. Ami fontos, hogy az elemrészbe hivatkozzátok be az "overlay overlay-bg" nevű osztályt, ugyanis ez lesz a háttér.
+A projekthez még két oldalt kell elkészíteni, ezért kérlek titeket, hogy a fent felsorolt lépéseket legkésőbb
+SZERDA este 8-ra készítsétek el.
+
+Jó munkát: Tomi 😀😘
