@@ -6,7 +6,7 @@ html, body {
     width: 100%;
     height: 100%;
     font-family: 'Roboto';
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(22, 22, 22);
     scroll-behavior: smooth;
 }
 
@@ -22,7 +22,7 @@ ul
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(200,200,200);
+    background-color: rgb(222,222,222);
 }
 
 p
@@ -46,7 +46,7 @@ h3
 {
 	margin-left: 0%;
 	margin-right: 0%;
-	background-color: rgb(200,200,200);
+	background-color: rgb(222,222,222);
 	padding-right: 50px;
 	padding-left: 50px;
 	padding-bottom: 25px;
@@ -57,7 +57,7 @@ h3
 h1
 {
 	text-align: center;
-	color: rgb(200,200,200);
+	color: rgb(222,222,222);
 }
 
 img
@@ -80,7 +80,7 @@ img
 {
 	float: center;
 	width: 13%;
-	background-color: rgb(200,200,200);
+	background-color: rgb(222,222,222);
 	padding-right: 100px;
 	padding-left: 100px;
 	border-radius: 40px;
