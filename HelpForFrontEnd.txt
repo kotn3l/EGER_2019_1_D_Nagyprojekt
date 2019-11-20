@@ -15,3 +15,22 @@ A projekthez még két oldalt kell elkészíteni, ezért kérlek titeket, hogy a
 SZERDA este 8-ra készítsétek el.
 
 Jó munkát: Tomi 😀😘
+
+
+
+SECTION ALFA VERZIÓ
+Na úgy látszik kisebb túlbuzgósággal de sikerült a FrontEnd nagyon alfa megírása.
+Ami fontos, hogy a trello-n fel fogom venni az új kártyákat és a régieket pedig átmozgattam ahova kell.
+A mostani feladatotok az lenne, hogy az "index.html"-ben megcsináltam a 'container' részt, amiben mi ténylegesen el fogjuk tárolni
+azokat a dolgokat amik kellenek majd nekünk, illetve amit a felhasználók látni/használni fognak(gombok, kérdések, súgó, stb.)
+A feladat megoldása megintcsak nem valami nagy történet. Amit és a kezdőlapon használtam egy az egyben átemelhető a többi oldalra,
+ahol még nicns. A súgónak ha szeretnétek már tölthettek fel valamit, hogy megnézzétek nektek melyik css-formázás tetszik a legjobban
+(h1-h6), de még nem fontos teljes játékleírást adni, mert ahhoz még nekem van egy olyan ötletem amit közösen kell majd átbeszélnünk.
+Mivel nem valami sok a meló legyetek szívesek legkésőbb Csütörtök(11.21) délre(12:00) megcsinálni, hogy óra előtt még át tudjam nézni
+és ha kell javítani benne, bár az előzőben se igazán kellett.
+Egy fontos dolog, ami az előző munkánál nem hiba, hanem inkább szemszúró dolog: TÖRDELÉS
+Figyeljetek oda rá, ugyanis html-ben nem igazán zavar be a kód futásába/működésébe, de vannak olyan nyelvek ahol az egész
+progot hazavágja az, ha nem jól van betördelve a kód. Én most az összes kódot ahol csak találtam ilyen hibát megcsináltam, de
+had ne kelljen minden alalommal még nekem ezzel foglalkoznom légyszi.
+
+Jó munkát: Tomi 😀😘
