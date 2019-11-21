@@ -125,3 +125,10 @@ a:hover
     clear: both;
     display: table;
 }
+.kovlistaleftalign{
+	text-align: left;
+	font-size: 110%;
+}
+td {
+	font-size: 95%;
+}
