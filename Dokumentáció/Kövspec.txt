@@ -31,4 +31,22 @@ Befejezés után rögtön látjuk elért pontjainkat, aztán egy gomb segítség
 -
 
 8. Fogalomszótár
-Toplista - A játékban résztvevő játékosok pontszámai alapján történő rangsorba sorolása.
+Toplista - A játékban résztvevő játékosok pontszámai alapján történő rangsorba sorolása. Ehhez szükséges egy neves bejelentkezés.
+
+Játék - Esetünkben a Legyen Ön is Milliomos nevezetű közismert műveltségi vetélkedő játék inspirálta kvíz játék némi változtatásokkal.
+
+MySQL - Egy többfelhasználós, SQL-alapú relációs adatbázis-kezelő rendszer.
+
+SQL - Structured Query Language - magyarul: strukturált lekérdezőnyelv - relációs adatbázis-kezelők lekérdezési nyelve.
+
+HTML - HyperText Makeup Language - magyarul: hiperszöveges jelölőnyelv - weboldalak készítéséhez kifejlesztett leírónyelv.
+
+CSS - Cascading Style Sheets - magyarul: egymásba ágyazott stílusalapok - weboldalak külleméhez kifejlesztett stílusleíró nyelv.
+
+Játékmenet - A fentebb említett játék lefolyásának folyamata.
+
+Front-End - Egy adott rendszer legfelsőbb, a felhasználóval kapcsolatot taró rétege, amelynek feladata a rendszerből kijutó adatok megjelenítése, prezentálása, illetve a bejövő adatok fogadása.
+
+Back-End - Egy adott rendszer alsóbb rétege, aminek feladata a front-end réteg felől érkező adatok feldolgozása, valamint a keletkezett eredmény front-end számára történő visszajuttatása.
+
+Supervisor - Angol szó magyarul felügyelő. A projekt szempontjából olyan személy(ek) aki(k) a fejlesztési folyamatokat felügyelik.
