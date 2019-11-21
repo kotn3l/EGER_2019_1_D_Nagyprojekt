@@ -4974,7 +4974,7 @@ INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('2',
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('3','Milyen állat gyurgyalag?','1','2');
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('4','Mi látható az ötforintos érmén az alábbiak közül?','1','1');
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('5','Kije volt Szent Istvánnak Orseolo Péter, a második magyar király?','1','18');
-INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('6','Kit személyesített meg Val Kilmer a The Doors című filmben?','1','21');
+INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('6','Kit személyesített meg Val Kilmer a The Doors című filmben?','1','21'); 
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('7','Mi volt a címe József Attila utolsó, életében megjelent kötetének?','1','6');
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('8','Melyik festő nem itáliai az alábbiak közül?','1','8');
 INSERT INTO question (difficulty, question, is_active, category_id) VALUES ('9','Melyik olimpián szereztünk mindössze egy aranyérmet?','1','15');
