@@ -100,6 +100,16 @@ a:hover
 {
       text-align: center;
 }
+.centerbottom
+{
+	width: 13%;
+	background-color: rgb(222,222,222);
+	padding-right: 100px;
+	padding-left: 100px;
+	border-radius: 40px;
+	font-size: 90%;
+	text-align: center;
+}
 
 .kozepeles
 {
