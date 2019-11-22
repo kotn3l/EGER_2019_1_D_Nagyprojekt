@@ -132,3 +132,12 @@ a:hover
 td {
 	font-size: 95%;
 }
+tr:nth-child(even) {
+    background-color: rgb(175,175,175);
+}
+table,
+th,
+td {
+    border-collapse: collapse;
+    padding: 5px;
+}
