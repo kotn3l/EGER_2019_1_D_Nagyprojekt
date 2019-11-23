@@ -141,3 +141,7 @@ td {
     border-collapse: collapse;
     padding: 5px;
 }
+.subtitles{
+	margin-top: 0px;
+	margin-bottom: 15px;
+}
