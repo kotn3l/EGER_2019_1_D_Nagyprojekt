@@ -28,7 +28,7 @@ ul
 p
 {
 	text-align: justify;
-	font-size: 110%;
+	font-size: 100%;
 }
 
 li
@@ -143,5 +143,5 @@ td {
 }
 .subtitles{
 	margin-top: 0px;
-	margin-bottom: 15px;
+	margin-bottom: 30px;
 }
