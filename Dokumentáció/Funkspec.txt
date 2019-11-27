@@ -1,4 +1,4 @@
-Funkcionális specifikáció
+﻿Funkcionális specifikáció
 
 1.Bevezetés
 Egy olyan alkalmazást fejlesztünk, amelynek egy ismert televíziós kvízjáték, műveltségi vetélkedő adott alapot, ez nem más mint, a Legyen Ön is milliomos!
@@ -31,6 +31,14 @@ Ahhoz, hogy tudjuk hogy, hogyan állunk jelenleg a játékunkban arra is lesz le
 7.Használati esetek
 
 8.Képernyőtervek
+-
 
 9.Forgatókönyvek
-
+A kezdőlapra érkezve megtaláljuk a menüpontokat melyek tartalmazzák a kvízjáték leírását, magát a játékot, a toplistát,
+a weboldal fejlesztőit és annak adatait. A játék menüpontra kattintva elindul a játék melynek futási ideje alatt három szereplő figyelhető meg.
+Az első szereplő maga a futó alkalmazás. (weben)
+Bejelentkezésnél meg kell adni a játékos nevünket, amellyel a későbbiekben feljegyez minket a játék a toplistára a pontszámunk alapján.
+Majd megjelenik a timer a segitségek, és a játékos feladat.
+Ezzel van interakcióban a második szereplő, maga a felhasználó, aki kitölti a tesztet, úgy hogy az időn ne lépjen túl.
+Ha a játékosnak szüksége van, akkor igénybe veheti a segitségek eggyikét is.
+A harmadik szereplő egy web-service, ami a tesztekhez szükséges adatokat szolgáltatja az alkalmazásnak egy adatbázisból.
