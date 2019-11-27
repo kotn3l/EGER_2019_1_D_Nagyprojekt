@@ -36,9 +36,19 @@ Pl. nem szabad megengedni, hogy egy JÁTÉKOS akinek csak felhasználói aktivit
 
 A különböző használati esetek Felhasználók szerint:
 
--ADMIN:
+- ADMIN:
+	- Az ADMIN beléphet játékos szerepkörbe, hogy az a játék hibamentes működését ellenőrizhesse.
+	- Az ADMIN(ok) feladata a rendszer probléma mentes működtetése. Ez egyben jár azzal, hogy az egész rendszerhez van hozzáférésük.
+	- Az Admin(ok)nak hozzákell tudni férniük a felhasználók listájához, ahol mindent átváltoztathatnak egy felhasználó profilján.
+	- Tudniuk kell a felhasználók jogosultságait, szerepkörét, jelszavát, és felhasználó nevét módosítani.
+	- Képesnek kell lenniük arra, hogy felhasználókat vegyenek fel rendszerbe és, hogy távolítsanak el belőle.
+	- Ők képesek a játékon belüli módósításokra, feladatok/kérdések szerkesztésére, létrehozására, megszabhatja az időhatárt.
 
--JÁTÉKOS:
+- JÁTÉKOS:
+	- Nem léphet át ADMIN szerepkörbe, kivéve, ha jogosultságot kap rá.
+	- Ő interaktál a weboldallal, illetve annak alkalmazásával.
+	- A JÁTÉKOS számára elérhető egy Játék felület, ahol Pontokat tud szerezni időre.
+	- A végső, elért pontszáma alapján egy Toplistába kerül be.
 
 8.Képernyőtervek
 -
