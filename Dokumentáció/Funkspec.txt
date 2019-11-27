@@ -30,6 +30,16 @@ Ahhoz, hogy tudjuk hogy, hogyan állunk jelenleg a játékunkban arra is lesz le
 
 7.Használati esetek
 
+Két felhasználói szerepkörünk van: ADMIN és JÁTÉKOS.
+Fontos, hogy a különböző rendszer használatokhoz csak az férjen hozzá akinek hozzá kell férnie.
+Pl. nem szabad megengedni, hogy egy JÁTÉKOS akinek csak felhasználói aktivitása van a rendszerrel, az ADMIN jogosultságot kapjon.
+
+A különböző használati esetek Felhasználók szerint:
+
+-ADMIN:
+
+-JÁTÉKOS:
+
 8.Képernyőtervek
 -
 
