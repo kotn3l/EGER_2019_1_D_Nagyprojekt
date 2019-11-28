@@ -3484,6 +3484,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   background: #f9f9ff;
 }
 
+.sugo-text{
+  margin-left: 1em;
+  font-size: 75%;
+}
+
 /*
 ################
                End Blog Details  Page style
