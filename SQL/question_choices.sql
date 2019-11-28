@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2019. Nov 21. 13:09
+-- Létrehozás ideje: 2019. Nov 28. 19:35
 -- Kiszolgáló verziója: 5.7.26
 -- PHP verzió: 7.2.18
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `labor1`
+-- Adatbázis: `labor`
 --
 
 -- --------------------------------------------------------
@@ -34,6 +34,7 @@ CREATE TABLE IF NOT EXISTS `question_choices` (
   `question_id` int(11) NOT NULL,
   `is_right_choice` binary(1) NOT NULL DEFAULT '\0',
   `choice` varchar(255) NOT NULL,
+  `difficulty` int(11) NOT NULL,
   PRIMARY KEY (`choice_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 COMMIT;
