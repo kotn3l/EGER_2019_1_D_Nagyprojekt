@@ -809,15 +809,15 @@ h6 {
   font-size: 14px;
 }
 h7 {
-	font-size: 10px;
+	font-size: 14px;
 	color: orange;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, h7 {
   line-height: 1.5em;
 }
 
-.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6 {
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6, .typography h7 {
   color: #777777;
 }
 
