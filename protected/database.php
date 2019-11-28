@@ -7,4 +7,20 @@
     $connection->exec("SET NAMES 'utf8'");
     return $connection;
   }
+  //listázás
+  function getList($queryString, $queryParams = array())
+  {
+    $connection = getConnection();
+    $statement = $connection->prepare($queryString);
+    $success = $statement->execute($queryParams);
+
+    $result = array();
+    if($success){
+        $result = $statement->fetchAll();
+    }
+    $statement->closeCursor();
+    $connection = null;
+
+    return $result;
+  }
  ?>
