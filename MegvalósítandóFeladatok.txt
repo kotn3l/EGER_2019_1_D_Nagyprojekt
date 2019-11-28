@@ -1,0 +1,19 @@
+Üdv mindenkinek!
+A mai órán nem tudok bent lenni, viszont van egy pár dolog amit meg kellene csinálni.
+- Mindenki aki az órán jelen van a fejlesztók menüpontba vigye fel a saját nevét, neptun kódját és az e-mail címét
+	a már látható módon és ezt commitolja fel gitre.
+- A frontend csapat a súgót írja meg. Tartsátok figyelem előtt, hogy előfordulhat olyan eset, amikor is a felhasználó
+	nem ért az informatikához nagyon, ezért legyetek szyvesek minnél részletesebben megírni.
+	Nektek is hasznotokra válhat ez. Ha külön push+commit-oljátok fel a gombok működését a pontozási rendszer,
+	a játék elkezdése/befejezése állapotokat az nektek is több commit.
+	Én azt javaslom, hogy a frontendesek osszál be egymás között, hogy ki melyik szakaszt írja és azt is pusholja fel.
+- Frontendben kezdjétek el kidolgozni a játék felületen a gombokat. A css fájlban találtok már gomb osztályhoz megírt részt,
+	de ha nem azt akarjátok hassználni felvihettek újabbat is annyi a kérésem, hogy ekkor a css aljára tegyétek ezt.
+- A backendnek meg kellene csinálni az admin belépést, valamint a felhasználó belépést, ugyanis akkor én a hétvégén
+	kidolgoznám a scriptet hozzá, valamint megcsinálnám az admin felületet, ami a kérdéseket tölti fel.
+
+==> Következő hét nagybemutatás, uh valamikor időt kellene arra is szánni, hogy összeüljünk legkésőbb a szerdai napon, hogy teljesen át tudjuk beszélni
+	mit is mutatunk be, valamint mindenkinek megnéznénk ki melyik kódrészt írta.
+
+Jó munkát és várom a kódokat :)
+Üdv: Tamás
