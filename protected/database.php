@@ -23,6 +23,7 @@
 
     return $result;
   }
+  
   function getRecord($queryString, $queryParams = []){
     $connection = getConnection();  
     $statement = $connection->prepare($queryString);
@@ -31,6 +32,15 @@
     $statement->closeCursor();
     $connection = null;
     return $result;
-}
+  }
+
+  function executeDML($queryString, $queryParams = []){
+    $connection = getConnection();  
+    $statement = $connection->prepare($queryString);
+    $success = $statement->execute($queryParams);
+    $statement->closeCursor();
+    $connection = null;
+    return $success;
+  }
 
  ?>
