@@ -23,4 +23,14 @@
 
     return $result;
   }
+  function getRecord($queryString, $queryParams = []){
+    $connection = getConnection();  
+    $statement = $connection->prepare($queryString);
+    $success = $statement->execute($queryParams);
+    $result = $success ? $statement->fetch() : [];
+    $statement->closeCursor();
+    $connection = null;
+    return $result;
+}
+
  ?>
