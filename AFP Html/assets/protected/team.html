@@ -29,7 +29,7 @@
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
 				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
-				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
+				          
 						  <?php
 							if ( IsUserLoggedIn() ) {
 							    echo '<li class="menu-active"><a href="?P=game">Játék</a></li>';
@@ -37,6 +37,7 @@
 							    echo '<li class="menu-active"><a href="?P=login">Bejelentkezés</a></li>';
 							 }
 							?>
+						  <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
 				          <li class="menu-active"><a href="?P=toplist">Toplisták</a></li>
 				          <li class="menu-active"><a href="?P=team">Fejlesztők</a></li>
 				        </ul>
