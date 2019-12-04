@@ -2,6 +2,9 @@
 function IsUserLoggedIn(){
     return $_SESSION != null && array_key_exists('uid', $_SESSION) && is_numeric($_SESSION['uid']);
 }
+function IsUserAdmin(){
+    return $_SESSION != null && array_key_exists('admin', $_SESSION) && is_numeric($_SESSION['admin']);
+}
 
 function UserLogout(){
     session_unset();
@@ -25,6 +28,7 @@ function UserLogin($username, $password){
         $_SESSION['email'] = $record['email'];
 
         if ($record['admin'] == 1) {
+            $_SESSION['admin'] = $record['admin'];
             header('Location:?P=admin');
         } else {
             header('Location:?P=home');
