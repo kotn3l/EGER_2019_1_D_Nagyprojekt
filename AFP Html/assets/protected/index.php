@@ -50,7 +50,7 @@
 							 }
 							?>
 				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
-				          <li class="menu-active"><a href="top.html">Toplisták</a></li>
+				          <li class="menu-active"><a href="?P=top">Toplisták</a></li>
 				          <li class="menu-active"><a href="team.html">Fejlesztők</a></li>
 				          <?php
 							if ( IsUserLoggedIn() ) {
