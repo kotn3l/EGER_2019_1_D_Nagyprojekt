@@ -49,7 +49,7 @@
 							    echo '<li class="menu-active"><a href="?P=login">Bejelentkezés</a></li>';
 							 }
 							?>
-				          <li class="menu-active"><a href="info.html">Játékleírás</a></li>
+				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
 				          <li class="menu-active"><a href="top.html">Toplisták</a></li>
 				          <li class="menu-active"><a href="team.html">Fejlesztők</a></li>
 				          <?php
