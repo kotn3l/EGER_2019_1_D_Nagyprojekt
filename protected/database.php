@@ -23,6 +23,17 @@
 
     return $result;
   }
+ public function getUserstmt($queryString, $queryParams = []){
+    $sql="SELECT * From users ";
+    $statement=$this->connect()->prepare($sql);
+    $statement->execute($queryParams);
+    $names=$statement->fetchAll();
+    foreach($names as $name){
+      echo $name['username'].'<br>';
+    }
+
+     
+ }
 
   function getRecord($queryString, $queryParams = []){
     $connection = getConnection();  
