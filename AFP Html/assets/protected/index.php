@@ -135,7 +135,7 @@
 										    echo '<li><a href="?P=game">Játék</a></li>';
 										}
 										?>
-									<li><a href="?P=toplistlist">Toplisták</a></li>
+									<li><a href="?P=toplist">Toplisták</a></li>
 								</ul>								
 							</div>
 						</div>
