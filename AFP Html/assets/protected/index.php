@@ -120,8 +120,8 @@
 							<div class="single-footer-widget">
 								<h6>Fejlesztők</h6>
 								<ul>
-									<li><a href="team.html">Front End</a></li>
-									<li><a href="team.html">Back End</a></li>
+									<li><a href="?P=team">Front End</a></li>
+									<li><a href="?P=team">Back End</a></li>
 								</ul>								
 							</div>
 						</div>
@@ -129,9 +129,13 @@
 							<div class="single-footer-widget">
 								<h6>A játék</h6>
 								<ul>
-									<li><a href="info.html">Játékleírás</a></li>
-									<li><a href="game.html">Játék</a></li>
-									<li><a href="top.html">Toplisták</a></li>
+									<li><a href="?P=info">Játékleírás</a></li>
+									<?php
+										if ( IsUserLoggedIn() ) {
+										    echo '<li><a href="?P=game">Játék</a></li>';
+										}
+										?>
+									<li><a href="?P=toplist">Toplisták</a></li>
 								</ul>								
 							</div>
 						</div>
