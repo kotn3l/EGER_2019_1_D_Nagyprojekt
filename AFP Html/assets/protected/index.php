@@ -50,7 +50,7 @@
 							 }
 							?>
 				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
-				          <li class="menu-active"><a href="?P=top">Toplisták</a></li>
+				          <li class="menu-active"><a href="?P=toplist">Toplisták</a></li>
 				          <li class="menu-active"><a href="?P=team">Fejlesztők</a></li>
 				          <?php
 							if ( IsUserLoggedIn() ) {
@@ -135,7 +135,7 @@
 										    echo '<li><a href="?P=game">Játék</a></li>';
 										}
 										?>
-									<li><a href="?P=toplist">Toplisták</a></li>
+									<li><a href="?P=toplistlist">Toplisták</a></li>
 								</ul>								
 							</div>
 						</div>

@@ -117,7 +117,7 @@
 								<ul>
 									<li><a href="?P=info">Játékleírás</a></li>
 									<li><a href="?P=game">Játék</a></li>
-									<li><a href="?P=toplist">Toplisták</a></li>
+									<li><a href="?P=toplistlist">Toplisták</a></li>
 								</ul>								
 							</div>
 						</div>
