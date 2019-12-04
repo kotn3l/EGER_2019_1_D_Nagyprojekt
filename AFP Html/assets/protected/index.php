@@ -41,7 +41,7 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="index.html">Kezdőlap</a></li>
+				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
 				          	<?php
 							if ( IsUserLoggedIn() ) {
 							    echo '<li class="menu-active"><a href="?P=game">Játék</a></li>';
