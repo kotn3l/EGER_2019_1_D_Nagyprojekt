@@ -51,7 +51,7 @@
 							?>
 				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
 				          <li class="menu-active"><a href="?P=top">Toplisták</a></li>
-				          <li class="menu-active"><a href="team.html">Fejlesztők</a></li>
+				          <li class="menu-active"><a href="?P=team">Fejlesztők</a></li>
 				          <?php
 							if ( IsUserLoggedIn() ) {
 							    echo '<li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>';
