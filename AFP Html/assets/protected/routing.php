@@ -11,6 +11,7 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 			case 'logout': UserLogout(); break;
 			case 'home': require_once PROTECTED_DIR.'index.php'; break;
 			case 'game': require_once PROTECTED_DIR.'game.html'; break;
+			case 'info': require_once BASE_DIR.'info.html'; break;
 			
 			default: require_once PROTECTED_DIR.'index.php'; break;
 		}
