@@ -10,6 +10,10 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 							} break;
 			case 'logout': UserLogout(); break;
 			case 'game': require_once PROTECTED_DIR.'game.html'; break;
+			case 'home': require_once PROTECTED_DIR.'index.php'; break;
+			case 'info': require_once PROTECTED_DIR.'info.html'; break;
+			case 'toplist': require_once PROTECTED_DIR.'top.html'; break;
+			case 'team': require_once PROTECTED_DIR.'team.html'; break;
 			default: require_once PROTECTED_DIR.'index.php'; break;
 		}
 		
