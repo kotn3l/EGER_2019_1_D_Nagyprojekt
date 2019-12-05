@@ -10,7 +10,10 @@ function newgame() {
 	random_array = getRandList(0, 10);
 	points = 0;
 	question = 0;
-	//document.getElementById("point").innerHTML = "Pontszám: " + points + "/19";
+	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
+	document.getElementById("game").style.display="block";
+	document.getElementById("endgame").style.display = "none";
+	document.getElementById("points").value = points;
 	rndQuestion();
 }
 
@@ -20,7 +23,7 @@ function ellenorzes(element) {
 	if (parts[parts[5]] == element.textContent) {
 		element.style.background='green';
 		points++;
-		//document.getElementById("point").innerHTML = "Pontszám: " + points + "/19";
+		document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
 	}
 	else {
 		for(i=1; i<5; i++) {
@@ -33,13 +36,15 @@ function ellenorzes(element) {
 		}
 	}
 
-	if (question < 15) {
+	if (question < 5) {
 		question++;
 		setTimeout(rndQuestion, 1500);
 	}
-	if (question == 15) {
-		alert("A játék véget ért!\nPontszám: " + points + "\nÚj játék kezdéshez kattints az OK-ra!");
-		newgame();
+	if (question == 5) {
+		document.getElementById("game").style.display="none";
+		document.getElementById("endgame").style.display = "block";
+		document.getElementById("points").value = points;
+		document.getElementById("point").innerHTML = "Elért pontszám: " + points + "/10";
 	} 
 	
 		
