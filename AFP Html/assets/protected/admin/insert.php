@@ -41,8 +41,10 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="?P=admin">Kezdőlap</a></li>
 				          <li class="menu-active"><a href="?P=insert">Hozzáadás</a></li>
-						  <li class="menu-active"><a href="?P=delete">Törlés</a></li>
+				          <li class="menu-active"><a href="?P=list">Módosítás</a></li>
+						  <li class="menu-active"><a href="?P=list">Törlés</a></li>
 				          <li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>
 				        </ul>
 				      </nav>		    		
@@ -74,64 +76,20 @@
 					$answer = $_POST['answer'];
 
 
-					$query = "INSERT INTO `question` (`question`) VALUES (:question)";
+					$query = "INSERT INTO `question` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer)";
 					$params = [
 						':question' => $question,
+						':choice_a' => $choice_a,
+						':choice_b' => $choice_b,
+						':choice_c' => $choice_c,
+						':choice_d' => $choice_d,
+						':answer' => $answer,
 					];
 					require_once PROTECTED_DIR.'database.php';
 					$success = executeDML($query, $params);
 					if($success) echo 'Successfull insert';
 					else echo 'Error during insert';
 
-					$query = "SELECT `id` FROM `question` WHERE `question` = :question";
-					$params = [
-						':question' => $question
-					];
-					require_once PROTECTED_DIR.'database.php';
-					$record = getRecord($query, $params);
-					$question_id = $record['id'];
-
-					if ($answer == 1) {$is_right_choice = 1;} else {$is_right_choice = 0;}
-					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
-					$params = [
-						':question_id' => $question_id,
-						':is_right_choice' => $is_right_choice,
-						':choice' => $choice_a
-					];
-					require_once PROTECTED_DIR.'database.php';
-					executeDML($query, $params);
-
-					if ($answer == 2) {$is_right_choice = 1;} else {$is_right_choice = 0;}
-					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
-					$params = [
-						':question_id' => $question_id,
-						':is_right_choice' => $is_right_choice,
-						':choice' => $choice_b
-					];
-					require_once PROTECTED_DIR.'database.php';
-					executeDML($query, $params);
-
-					if ($answer == 3) {$is_right_choice = 1;} else {$is_right_choice = 0;}
-					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
-					$params = [
-						':question_id' => $question_id,
-						':is_right_choice' => $is_right_choice,
-						':choice' => $choice_c
-					];
-					require_once PROTECTED_DIR.'database.php';
-					executeDML($query, $params);
-
-					if ($answer == 4) {$is_right_choice = 1;} else {$is_right_choice = 0;}
-					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
-					$params = [
-						':question_id' => $question_id,
-						':is_right_choice' => $is_right_choice,
-						':choice' => $choice_d
-					];
-					require_once PROTECTED_DIR.'database.php';
-					$success = executeDML($query, $params);
-					if($success) echo 'Successfull insert';
-					else echo 'Error during insert';
 				}
 				?>
 
