@@ -63,6 +63,86 @@
 				</div>
 			</section>
 			
+				<?php 
+				if(array_key_exists('submit', $_POST)) {
+
+					$question = $_POST['question'];
+					$choice_a = $_POST['choice_a'];
+					$choice_b = $_POST['choice_b'];
+					$choice_c = $_POST['choice_c'];
+					$choice_d = $_POST['choice_d'];
+					$answer = $_POST['answer'];
+
+
+					$query = "INSERT INTO `question` (`question`) VALUES (:question)";
+					$params = [
+						':question' => $question,
+					];
+					require_once PROTECTED_DIR.'database.php';
+					$success = executeDML($query, $params);
+					if($success) echo 'Successfull insert';
+					else echo 'Error during insert';
+
+					$query = "SELECT `id` FROM `question` WHERE `question` = :question";
+					$params = [
+						':question' => $question
+					];
+					require_once PROTECTED_DIR.'database.php';
+					$record = getRecord($query, $params);
+					$question_id = $record['id'];
+
+					if ($answer == 1) {$is_right_choice = 1;} else {$is_right_choice = 0;}
+					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
+					$params = [
+						':question_id' => $question_id,
+						':is_right_choice' => $is_right_choice,
+						':choice' => $choice_a
+					];
+					require_once PROTECTED_DIR.'database.php';
+					executeDML($query, $params);
+
+					if ($answer == 2) {$is_right_choice = 1;} else {$is_right_choice = 0;}
+					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
+					$params = [
+						':question_id' => $question_id,
+						':is_right_choice' => $is_right_choice,
+						':choice' => $choice_b
+					];
+					require_once PROTECTED_DIR.'database.php';
+					executeDML($query, $params);
+
+					if ($answer == 3) {$is_right_choice = 1;} else {$is_right_choice = 0;}
+					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
+					$params = [
+						':question_id' => $question_id,
+						':is_right_choice' => $is_right_choice,
+						':choice' => $choice_c
+					];
+					require_once PROTECTED_DIR.'database.php';
+					executeDML($query, $params);
+
+					if ($answer == 4) {$is_right_choice = 1;} else {$is_right_choice = 0;}
+					$query = "INSERT INTO `question_choices` (`question_id`, `is_right_choice`, `choice`) VALUES (:question_id, :is_right_choice, :choice)";
+					$params = [
+						':question_id' => $question_id,
+						':is_right_choice' => $is_right_choice,
+						':choice' => $choice_d
+					];
+					require_once PROTECTED_DIR.'database.php';
+					$success = executeDML($query, $params);
+					if($success) echo 'Successfull insert';
+					else echo 'Error during insert';
+				}
+				?>
+
+				<form method="post">
+					<input type="text" name="question" placeholder="Kérdés"><br>
+					<input type="text" name="choice_a" placeholder="Válasz 1"><input type="radio" name="answer" value="1"><br>
+					<input type="text" name="choice_b" placeholder="Válasz 2"><input type="radio" name="answer" value="2"><br>
+					<input type="text" name="choice_c" placeholder="Válasz 3"><input type="radio" name="answer" value="3"><br>
+					<input type="text" name="choice_d" placeholder="Válasz 4"><input type="radio" name="answer" value="4"><br>
+					<input type="submit" name="submit" value="Insert">
+				</form>
 			
 			
 			<footer class="footer-area section-gap">
