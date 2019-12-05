@@ -100,7 +100,7 @@ var questions = ["Hol található a csarnokvíz?,a pályaudvaron,a szemben,a tej
 "Melyik volt Koncz Zsuzsa első önálló nagy slágere?,Szőke Anni balladája,Rohan az idő,Színes ceruzák,Kis virág,1",
 "Kik hordták eredetileg az anorákot?,a serpák,az eszkimók,a lappok,a nyenyecek,2",
 "Melyik járműről elnevezett együttes tagja volt Zorán a 60-as években?,Villamos,HÉV,Autóbusz,Metró,4",
-"Hogyan vágtatott a Tisza Petőfi verse szerint?,mint a megvadult bika,mint a forgószél,mint az őrült, ki letépte láncát,mint a menekülő, kit kerget a tatár,3",
+"Hogyan vágtatott a Tisza Petőfi verse szerint?,mint a megvadult bika,mint a forgószél,mint az őrült ki letépte láncát,mint a menekülő kit kerget a tatár,3",
 "Mivel foglalkozik az akinek az ikebana a hobbija?,keleti küzdősporttal,virágokkal,papírhajtogatással,japán kakasokkal,2",
 "Hány játékos van egyszerre a pályán egy kosárlabda-csapatból?,négy,hét,hat,öt,4",
 "Kiknek az érdekeit képviseli az UNICEF?,szakszervezetek,gyerekek,állatvédők,dolgozók,2",
