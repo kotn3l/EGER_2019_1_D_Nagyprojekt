@@ -24,19 +24,19 @@
     return $result;
   }
  public function getUserstmt($queryString, $queryParams = []){
-    $sql="SELECT * From users ";
+    $sql="SELECT * From questions ";
     $statement=$this->connect()->prepare($sql);
     $statement->execute($queryParams);
     $names=$statement->fetchAll();
-    foreach($names as $name){
-      echo $name['username'].'<br>';
+    foreach($questions  as $question){
+      echo $questions['question'].'<br>'.['category_id'].'<br>';
     }
 
-     
+
  }
 
   function getRecord($queryString, $queryParams = []){
-    $connection = getConnection();  
+    $connection = getConnection();
     $statement = $connection->prepare($queryString);
     $success = $statement->execute($queryParams);
     $result = $success ? $statement->fetch() : [];
@@ -46,7 +46,7 @@
   }
 
   function executeDML($queryString, $queryParams = []){
-    $connection = getConnection();  
+    $connection = getConnection();
     $statement = $connection->prepare($queryString);
     $success = $statement->execute($queryParams);
     $statement->closeCursor();
@@ -55,7 +55,7 @@
   }
 
   function getField($queryString, $queryParams = []){
-    $connection = getConnection();   
+    $connection = getConnection();
     $statement = $connection->prepare($queryString);
     $success = $statement->execute($queryParams);
     $result = $success ? $statement->fetch()[0] : [];
