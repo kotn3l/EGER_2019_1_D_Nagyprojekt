@@ -36,11 +36,11 @@ function ellenorzes(element) {
 		}
 	}
 
-	if (question < 5) {
+	if (question < 10) {
 		question++;
 		setTimeout(rndQuestion, 1500);
 	}
-	if (question == 5) {
+	if (question == 10) {
 		document.getElementById("game").style.display="none";
 		document.getElementById("endgame").style.display = "block";
 		document.getElementById("points").value = points;
