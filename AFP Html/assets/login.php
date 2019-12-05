@@ -40,10 +40,11 @@
 				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
-							<h1 class="text-white">		
+							<h1 class="text-white">	
+								Bejelentkezés/Regisztráció
 							</h1>
 							
-							<p class="text-white link-nav"><a>Kezdőlap</a>  <span class="lnr lnr-arrow-right"></span>  <a>Toplista</a></p>
+							<p class="text-white link-nav"><a>Kezdőlap</a>  <span class="lnr lnr-arrow-right"></span>  <a>Bejelentkezés</a></p>
 							</div>											
 					</div>
 				</div>
