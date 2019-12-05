@@ -14,6 +14,21 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 			case 'info': require_once PROTECTED_DIR.'info.html'; break;
 			case 'toplist': require_once PROTECTED_DIR.'top.html'; break;
 			case 'team': require_once PROTECTED_DIR.'team.html'; break;
+
+			case 'insert': require_once PROTECTED_ADMIN_DIR.'insert.php'; break;
+			case 'list': require_once PROTECTED_ADMIN_DIR.'list.php'; break;
+			case 'modify': require_once PROTECTED_ADMIN_DIR.'modify.php'; break;
+
+			case 'delete': 
+			if(array_key_exists('d', $_GET) && !empty($_GET['d'])) {
+				$query = "DELETE FROM `question` WHERE id = :id";
+				$params = [ ':id' => $_GET['d'] ];
+				require_once PROTECTED_DIR.'database.php';
+				executeDML($query, $params);
+
+			} header("Location: ?P=admin");
+				break;
+
 			default: require_once PROTECTED_DIR.'index.php'; break;
 		}
 		

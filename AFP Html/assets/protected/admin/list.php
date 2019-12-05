@@ -66,41 +66,38 @@
 			</section>
 			
 				<?php 
-				if(array_key_exists('submit', $_POST)) {
-
-					$question = $_POST['question'];
-					$choice_a = $_POST['choice_a'];
-					$choice_b = $_POST['choice_b'];
-					$choice_c = $_POST['choice_c'];
-					$choice_d = $_POST['choice_d'];
-					$answer = $_POST['answer'];
-
-
-					$query = "INSERT INTO `question` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer)";
-					$params = [
-						':question' => $question,
-						':choice_a' => $choice_a,
-						':choice_b' => $choice_b,
-						':choice_c' => $choice_c,
-						':choice_d' => $choice_d,
-						':answer' => $answer,
-					];
-					require_once PROTECTED_DIR.'database.php';
-					$success = executeDML($query, $params);
-					if($success) echo 'Successfull insert';
-					else echo 'Error during insert';
-
-				}
+				$query = "SELECT id, question, choice_a, choice_b, choice_c, choice_d, answer FROM question ORDER BY id ASC";
+				$params = [];
+				require_once PROTECTED_DIR.'database.php';
+				$records = getList($query, $params);
 				?>
 
-				<form method="post">
-					<input type="text" name="question" placeholder="Kérdés"><br>
-					<input type="text" name="choice_a" placeholder="Válasz 1"><input type="radio" name="answer" value="1"><br>
-					<input type="text" name="choice_b" placeholder="Válasz 2"><input type="radio" name="answer" value="2"><br>
-					<input type="text" name="choice_c" placeholder="Válasz 3"><input type="radio" name="answer" value="3"><br>
-					<input type="text" name="choice_d" placeholder="Válasz 4"><input type="radio" name="answer" value="4"><br>
-					<input type="submit" name="submit" value="Insert">
-				</form>
+				<?php if($records != null && !empty($records)): ?>
+					<table>
+						<tr>
+							<th>Kérdés</th>
+							<th>A</th>
+							<th>B</th>
+							<th>C</th>
+							<th>D</th>
+							<th>Megoldás</th>
+						</tr>
+						<?php foreach ($records as $record): ?>
+							<tr style="text-align: center;">
+								<td><?=$record['question']?></td>
+								<td><?=$record['choice_a']?></td>
+								<td><?=$record['choice_b']?></td>
+								<td><?=$record['choice_c']?></td>
+								<td><?=$record['choice_d']?></td>
+								<td><?=$record['answer']?></td>
+								<td><a href="?P=modify&id=<?=$record['id']?>">E</a></td>
+								<td><a href="?P=delete&d=<?=$record['id']?>">X</a></td>
+							</tr>
+						<?php endforeach; ?>
+					</table>
+				<?php else: ?>
+					<p>Nincs kérdés az adatbázisban</p>
+				<?php endif; ?>
 			
 			
 			<footer class="footer-area section-gap">
