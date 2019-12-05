@@ -9,13 +9,11 @@ html, body {
     background-color: rgb(22, 22, 22);
     scroll-behavior: smooth;
 }
-
 ol
 {
     margin-left: 15%;
     margin-right: 15%;
 }
-
 ul 
 {
     list-style-type: none;
@@ -24,24 +22,20 @@ ul
     overflow: hidden;
     background-color: rgb(222,222,222);
 }
-
 p
 {
 	text-align: justify;
 	font-size: 100%;
 }
-
 li
 {
 	font-size: 110%;
 }
-
 h3
 {
 	margin-top: 50px;
 	margin-bottom: 50px;
 }
-
 .content
 {
 	margin-left: 0%;
@@ -53,24 +47,16 @@ h3
 	padding-top: 5px;
 	border-radius: 10px;
 }
-
 h1
 {
 	text-align: center;
 	color: rgb(222,222,222);
 }
-
-img
-{
-
-}
-
 .right
 {
     float: right;
     padding-right: 25px;
 }
-
 .left
 {
     float: left;
@@ -98,7 +84,7 @@ a:hover
 }
 .centeri 
 {
-      text-align: center;
+    text-align: center;
 }
 .centerbottom
 {
@@ -110,15 +96,12 @@ a:hover
 	font-size: 90%;
 	text-align: center;
 }
-
 .kozepeles
 {
     float: left;
     width: 33.33%;
     text-align: center;
-
 }
-
 .fixalas::after
 {
     content: "";
