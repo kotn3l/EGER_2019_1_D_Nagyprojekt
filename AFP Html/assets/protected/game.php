@@ -1,3 +1,12 @@
+<?php
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+} 
+?>
+<?php require_once 'protected/config.php'; ?>
+<?php require_once PROTECTED_DIR.'userManager.php'; ?>	
+
 	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
@@ -37,7 +46,7 @@
 							if ( IsUserLoggedIn() ) {
 							    echo '<li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>';
 							}
-							?>
+						  ?>
 				        </ul>
 				      </nav>		    		
 			    	</div>
@@ -57,8 +66,10 @@
 				</div>
 			</section>
 
-			<section class="team-area section-gap team-page-teams" id="team">
-				<div class="container">
+
+			<section class="team-area section-gap team-page-teams">
+				<center><h1 class="text-black" id="point"></h1></center>
+				<div class="container" id="game">
 					<div class="row justify-content-left d-flex align-items-center">
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
@@ -75,8 +86,33 @@
 						</div>
 
 					</div>
-				</div>	
+				</div>
+				<div class="container" id="endgame" style="display:none;">
+					<form method="post">
+						<input type="text" name="points" id="points" value="0" style="display:none">
+						<input class="button" type="submit" name="submit" value="Vége">
+					</form>
+				</div>
 			</section>
+
+<?php 
+	if(array_key_exists('submit', $_POST)) {
+		$name = getUserName();
+		$points = $_POST['points'];
+
+		$query = "INSERT INTO `toplist` (`name`, `points`) VALUES (:name, :points)";
+		$params = [
+			':points' => $points,
+			':name' => $name
+		];
+		require_once PROTECTED_DIR.'database.php';
+			$success = executeDML($query, $params);
+			if($success) {
+				echo("<script>location.href = '?P=toplist';</script>");
+			} else echo 'Error during insert';
+	}
+?>
+
 
 			<footer class="footer-area section-gap">
 				<div class="container">
