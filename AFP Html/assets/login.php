@@ -42,8 +42,9 @@
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">		
 							</h1>
+							
 							<p class="text-white link-nav"><a>Kezdőlap</a>  <span class="lnr lnr-arrow-right"></span>  <a>Toplista</a></p>
-						</div>											
+							</div>											
 					</div>
 				</div>
 			</section>
