@@ -1,7 +1,7 @@
 <?php
 
 
-$query = "DELETE FROM contacts WHERE name={$_POST['name']} LIMIT 1";
+$query = "DELETE FROM question WHERE question={$_POST['question']} LIMIT 1";
 
 
 if (mysql_affected_rows() == 1) {
@@ -10,7 +10,7 @@ if (mysql_affected_rows() == 1) {
             <strong>Contact Has Been Deleted</strong><br /><br />
 
 <?php
- } else { 
+ } else {
 
 ?>
 
@@ -18,4 +18,4 @@ if (mysql_affected_rows() == 1) {
 
 
 <?php
-} 
+}
