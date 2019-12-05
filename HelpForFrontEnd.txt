@@ -16,8 +16,6 @@ SZERDA este 8-ra készítsétek el.
 
 Jó munkát: Tomi 😀😘
 
-
-
 SECTION ALFA VERZIÓ
 Na úgy látszik kisebb túlbuzgósággal de sikerült a FrontEnd nagyon alfa megírása.
 Ami fontos, hogy a trello-n fel fogom venni az új kártyákat és a régieket pedig átmozgattam ahova kell.
@@ -34,3 +32,6 @@ progot hazavágja az, ha nem jól van betördelve a kód. Én most az összes k�
 had ne kelljen minden alalommal még nekem ezzel foglalkoznom légyszi.
 
 Jó munkát: Tomi 😀😘
+
+BEMUTATÁS
+A 12.05-i órán kerül a demo bemutatásra amire mindenki amit csinált azt fogja bemutatni.
