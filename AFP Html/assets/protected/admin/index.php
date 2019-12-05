@@ -63,41 +63,7 @@
 				</div>
 			</section>
 			
-			<section class="team-area section-gap team-page-teams" id="team">
-				<div class="container">
-					<div class="row justify-content-center d-flex align-items-center">
-						<div class="col-md-6 single-team">
-							<div class="meta-text mt-30 text-center">
-								<h1>ALKALMAZÁSOK FEJLESZTÉSE PROJEKT LABOR I.</h1>
-							</div>
-						</div>
-					</div>				
-					<div class="row justify-content-center d-flex align-items-center">
-						<div class="col-md-6 single-team">
-							<div class="meta-text mt-30 text-center">
-								<h2>Supervisors</h2>
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center d-flex align-items-center">
-						<div class="col-md-3 single-team">
-						    <div class="meta-text mt-30 text-center">
-							    <h4>Bocsi Dávid</h4>								    	
-						    </div>
-						</div>
-						<div class="col-md-3 single-team">
-						    <div class="meta-text mt-30 text-center">
-							    <h4>Marton Benjámin</h4>	    	
-						    </div>
-						</div>
-						<div class="col-md-3 single-team">
-						    <div class="meta-text mt-30 text-center">
-							    <h4>Serfőző István Marcell</h4>			    	
-						    </div>
-						</div>
-					</div>
-				</div>	
-			</section>
+			
 			
 			<footer class="footer-area section-gap">
 				<div class="container">
