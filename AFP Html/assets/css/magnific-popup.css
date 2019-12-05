@@ -97,13 +97,10 @@
     color: #CCC; }
     .mfp-preloader a:hover {
       color: #FFF; }
-
 .mfp-s-ready .mfp-preloader {
   display: none; }
-
 .mfp-s-error .mfp-content {
   display: none; }
-
 button.mfp-close,
 button.mfp-arrow {
   overflow: visible;
@@ -117,11 +114,9 @@ button.mfp-arrow {
   z-index: 1046;
   box-shadow: none;
   touch-action: manipulation; }
-
 button::-moz-focus-inner {
   padding: 0;
   border: 0; }
-
 .mfp-close {
   width: 44px;
   height: 44px;
