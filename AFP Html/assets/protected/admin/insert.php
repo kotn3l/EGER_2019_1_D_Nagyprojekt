@@ -132,7 +132,6 @@
 					$success = executeDML($query, $params);
 					if($success) echo 'Successfull insert';
 					else echo 'Error during insert';
-
 				}
 				?>
 
