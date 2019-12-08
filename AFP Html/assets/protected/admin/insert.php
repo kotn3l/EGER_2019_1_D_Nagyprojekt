@@ -75,9 +75,10 @@
 					$choice_c = $_POST['choice_c'];
 					$choice_d = $_POST['choice_d'];
 					$answer = $_POST['answer'];
+					$difficulty = $_POST['difficulty'];
 
 
-					$query = "INSERT INTO `question` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer)";
+					$query = "INSERT INTO `questions` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`, `difficulty`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer, :difficulty)";
 					$params = [
 						':question' => $question,
 						':choice_a' => $choice_a,
@@ -85,6 +86,7 @@
 						':choice_c' => $choice_c,
 						':choice_d' => $choice_d,
 						':answer' => $answer,
+						':difficulty' => $difficulty
 					];
 					require_once PROTECTED_DIR.'database.php';
 					$success = executeDML($query, $params);
@@ -100,6 +102,7 @@
 					<input type="text" name="choice_b" placeholder="Válasz 2"><input type="radio" name="answer" value="2"><br>
 					<input type="text" name="choice_c" placeholder="Válasz 3"><input type="radio" name="answer" value="3"><br>
 					<input type="text" name="choice_d" placeholder="Válasz 4"><input type="radio" name="answer" value="4"><br>
+					<input type="text" name="difficulty" placeholder="Nehézség">
 					<input type="submit" name="submit" value="Insert">
 				</form>
 			
