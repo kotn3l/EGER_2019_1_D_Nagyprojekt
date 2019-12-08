@@ -6,10 +6,12 @@ var random_array;
 var points;
 var question = 0;
 var parts;
+var difficulty;
 function newgame() {
 
 	points = 0;
 	question = 0;
+	difficulty = 1;
 	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
 	document.getElementById("game").style.display="block";
 	document.getElementById("endgame").style.display = "none";
@@ -40,6 +42,7 @@ function ellenorzes(element, answer) {
 	if (btn == element) {
 		element.style.background='green';
 		points++;
+		difficulty++;
 		document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
 	}
 	else {
@@ -52,10 +55,10 @@ function ellenorzes(element, answer) {
 			}
 		}
 	}
-
+	
 	if (question < 10) {
 		question++;
-		setTimeout(rndQuestion, 1500);
+		setTimeout(refreshData, 1500);
 	}
 	if (question == 10) {
 		document.getElementById("game").style.display="none";
@@ -70,6 +73,23 @@ function rndQuestion(){
 		var button = document.getElementById("button" + i);
 		button.style.background='lightgrey';
 	}
-	
 
 }
+
+
+function refreshData(){
+	  var display = document.getElementById("content");
+      var xmlhttp = new XMLHttpRequest();
+      var difficulty = document.getElementById("difficulty");
+      xmlhttp.open("GET", "?P=next");
+      xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xmlhttp.send(difficulty);
+      xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+        	display.innerHTML = this.responseText;
+        	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
+        } else {
+
+        };
+      }
+    }

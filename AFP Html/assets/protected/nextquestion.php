@@ -29,42 +29,6 @@ if(!isset($_SESSION))
 		</head>
 		<body>
 
-			<header id="header" id="home">
-			    <div class="container">
-			    	<div class="row align-items-center justify-content-between d-flex">
-				      <div id="logo">
-				        <a href="?P=home"><img src="img/logo.png" alt="AFP Nagyprojekt" title="AFP Nagyprojekt" /></a>
-				      </div>
-				      <nav id="nav-menu-container">
-				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
-				          <li class="menu-active"><a href="?P=game">Játék</a></li>
-				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
-				          <li class="menu-active"><a href="?P=toplist">Toplisták</a></li>
-				          <li class="menu-active"><a href="?P=team">Fejlesztők</a></li>
-				          <?php
-							if ( IsUserLoggedIn() ) {
-							    echo '<li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>';
-							}
-						  ?>
-				        </ul>
-				      </nav>		    		
-			    	</div>
-			    </div>
-			</header>
-
-			<section class="banner-area relative" id="home">
-				<div class="overlay overlay-bg"></div>
-				<div class="container">
-					<div class="row d-flex align-items-center justify-content-center">
-						<div class="about-content col-lg-12">
-							<h1 class="text-white">
-								JÁTÉK			
-							</h1>	
-						</div>											
-					</div>
-				</div>
-			</section>
 
 
 			<?php 
@@ -91,6 +55,7 @@ if(!isset($_SESSION))
 					<div class="row justify-content-left d-flex align-items-center">
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
+
 							<div class="button" id="button1" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button1; ?></div>
 							<div class="button" id="button2" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button2; ?></div>
 							<div class="button" id="button3" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button3; ?></div>
@@ -107,7 +72,6 @@ if(!isset($_SESSION))
 				</div>
 				<div class="container" id="endgame" style="display:none;">
 					<form method="post">
-						<input type="hidden" id="difficulty" name="difficulty" value="1">
 						<input type="text" name="points" id="points" value="0" style="display:none">
 						<input class="button" type="submit" name="submit" value="Vége">
 					</form>
