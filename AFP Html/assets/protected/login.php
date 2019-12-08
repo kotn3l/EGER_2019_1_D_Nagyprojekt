@@ -36,6 +36,11 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
+				        	<?php
+							if ( IsUserAdmin() ) {
+							    echo '<li class="menu-active"><a href="?P=admin">Admin menü</a></li>';
+							}
+						  ?>
 				          <li class="menu-active"><a href="./">Kezdőlap</a></li>
 				        </ul>
 				      </nav>		    		
@@ -49,6 +54,7 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">		
+								Bejelentkezés
 							</h1>	
 						</div>											
 					</div>

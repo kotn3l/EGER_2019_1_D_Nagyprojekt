@@ -1,13 +1,4 @@
-<?php
-    if(!isset($_SESSION)) 
-    { 
-        session_start(); 
-    } 
-?>
-<?php require_once 'protected/config.php'; ?>
-<?php require_once PROTECTED_DIR.'userManager.php'; ?>	
-
-	<!DOCTYPE html>
+﻿	<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -29,81 +20,112 @@
 		</head>
 		<body>
 
-			<div class="page">
-				<?php require_once PROTECTED_DIR.'routing.php'; ?>
-			</div>
-
 			<header id="header" id="home">
 			    <div class="container">
 			    	<div class="row align-items-center justify-content-between d-flex">
 				      <div id="logo">
-				        <a href="index.html"><img src="img/logo.png" alt="AFP Nagyprojekt" title="AFP Nagyprojekt" /></a>
+				        <a href="?P=home"><img src="img/logo.png" alt="AFP Nagyprojekt" title="AFP Nagyprojekt" /></a>
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				        	<li class="menu-active"><a href="?P=admin">Admin menü</a></li>
+				        	<?php
+							if ( IsUserAdmin() ) {
+							    echo '<li class="menu-active"><a href="?P=admin">Admin menü</a></li>';
+							}
+						  ?>
 				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
-				          <li class="menu-active"><a href="?P=insert">Hozzáadás</a></li>
-				          <li class="menu-active"><a href="?P=list">Módosítás</a></li>
-						  <li class="menu-active"><a href="?P=list">Törlés</a></li>
-				          <li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>
+				          
+						  <?php
+							if ( IsUserLoggedIn() ) {
+							    echo '<li class="menu-active"><a href="?P=game">Játék</a></li>';
+							} else {
+							    echo '<li class="menu-active"><a href="?P=login">Bejelentkezés</a></li>';
+							 }
+							?>
+						  <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
+				          <li class="menu-active"><a href="?P=toplist">Toplisták</a></li>
+				          <li class="menu-active"><a href="?P=team">Fejlesztők</a></li>
+				          <?php
+							if ( IsUserLoggedIn() ) {
+							echo '<li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>';
+							}
+						  ?>
 				        </ul>
 				      </nav>		    		
 			    	</div>
 			    </div>
 			</header>
-			
-			<section class="banner-area relative" id="home">
+
+
+			<section class="banner-area relative" id="home">	
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								ADMIN MENÜ			
+								FEJLESZTŐK			
 							</h1>	
+							<p class="text-white link-nav"><a href="?P=home">Kezdőlap</a>  <span class="lnr lnr-arrow-right"></span>  <a href="?P=team">Fejlesztők</a></p>
 						</div>											
 					</div>
 				</div>
 			</section>
-			
-				<?php 
-				if(array_key_exists('submit', $_POST)) {
 
-					$question = $_POST['question'];
-					$choice_a = $_POST['choice_a'];
-					$choice_b = $_POST['choice_b'];
-					$choice_c = $_POST['choice_c'];
-					$choice_d = $_POST['choice_d'];
-					$answer = $_POST['answer'];
-
-
-					$query = "INSERT INTO `question` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer)";
-					$params = [
-						':question' => $question,
-						':choice_a' => $choice_a,
-						':choice_b' => $choice_b,
-						':choice_c' => $choice_c,
-						':choice_d' => $choice_d,
-						':answer' => $answer,
-					];
-					require_once PROTECTED_DIR.'database.php';
-					$success = executeDML($query, $params);
-					if($success) echo 'Successfull insert';
-					else echo 'Error during insert';
-
-				}
-				?>
-
-				<form method="post">
-					<input type="text" name="question" placeholder="Kérdés"><br>
-					<input type="text" name="choice_a" placeholder="Válasz 1"><input type="radio" name="answer" value="1"><br>
-					<input type="text" name="choice_b" placeholder="Válasz 2"><input type="radio" name="answer" value="2"><br>
-					<input type="text" name="choice_c" placeholder="Válasz 3"><input type="radio" name="answer" value="3"><br>
-					<input type="text" name="choice_d" placeholder="Válasz 4"><input type="radio" name="answer" value="4"><br>
-					<input type="submit" name="submit" value="Insert">
-				</form>
-			
-			
+			<section class="team-area section-gap team-page-teams" id="team">
+				<div class="container">
+					<div class="row d-flex justify-content-center">
+						<div class="menu-content pb-70 col-lg-8">
+							<div class="title text-center">
+								<h1 class="mb-10">Fejlesztők</h1>
+							</div>
+						</div>
+					</div>						
+					<div class="row justify-content-center d-flex align-items-center">
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Bozó Tamás Dániel - J7Y3U4</h4>
+							    <p>btd2k17@gmail.com</p>
+								<h7>Frontend</h7>
+						    </div>
+						</div>
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Bokodi Máté - DVUDH3</h4>
+							    <p>bokodimate@gmail.com</p>
+								<h7>Backend</h7>
+						    </div>
+						</div>
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Mirkovszki Kornél - BK13MO</h4>
+							    <p>kotn3l@gmail.com</p>	
+								<h7>Frontend</h7>
+						    </div>
+						</div>
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Bognár Viktória - PMSVKX</h4>
+							    <p>apalosaa4@gmail.com</p>			    
+								<h7>Frontend</h7>
+						    </div>
+						</div>
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Antal Soma - AD0DBG</h4>
+							    <p>antal.soma@gmail.com</p>
+								<h7>Frontend</h7>
+						    </div>
+						</div>
+						<div class="col-md-3 single-team">
+						    <div class="meta-text mt-30 text-center">
+							    <h4>Pelle Marcell - NK</h4>
+							    <p>E-mail</p>	
+								<h7>Backend</h7>
+						    </div>
+						</div>
+					</div>
+				</div>	
+			</section>
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
@@ -121,8 +143,12 @@
 								<h6>A játék</h6>
 								<ul>
 									<li><a href="?P=info">Játékleírás</a></li>
-									<li><a href="?P=game">Játék</a></li>
-									<li><a href="?P=toplistlist">Toplisták</a></li>
+									<?php
+										if ( IsUserLoggedIn() ) {
+										    echo '<li><a href="?P=game">Játék</a></li>';
+										}
+										?>
+									<li><a href="?P=toplist">Toplisták</a></li>
 								</ul>								
 							</div>
 						</div>
@@ -140,8 +166,8 @@
 						</div>
 					</div>
 				</div>
-			</footer>
-			
+			</footer>		
+
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			

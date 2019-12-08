@@ -5,11 +5,16 @@ function IsUserLoggedIn(){
 function IsUserAdmin(){
     return $_SESSION != null && array_key_exists('admin', $_SESSION) && is_numeric($_SESSION['admin']);
 }
+function getUserName(){
+    if ($_SESSION != null && array_key_exists('name', $_SESSION)) {
+        return $_SESSION['name'];
+    }
+}
 
 function UserLogout(){
     session_unset();
     session_destroy();
-    header('Location:'.ADMIN_BASE_URL);
+    header('Location:'.BASE_DIR);
 }
 
 function UserLogin($username, $password){
@@ -57,7 +62,7 @@ function UserRegister($username, $password, $name, $email){
         ];
 
         if(executeDML($query, $queryParams))
-            header('Location:'.ADMIN_BASE_URL);
+            header('Location:'.BASE_DIR);
     }
     return false;
 }

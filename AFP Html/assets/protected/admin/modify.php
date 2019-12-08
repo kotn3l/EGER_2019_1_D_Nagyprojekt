@@ -41,7 +41,8 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				          <li class="menu-active"><a href="?P=admin">Kezdőlap</a></li>
+				          <li class="menu-active"><a href="?P=admin">Admin menü</a></li>
+				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
 				          <li class="menu-active"><a href="?P=insert">Hozzáadás</a></li>
 				          <li class="menu-active"><a href="?P=list">Módosítás</a></li>
 						  <li class="menu-active"><a href="?P=list">Törlés</a></li>

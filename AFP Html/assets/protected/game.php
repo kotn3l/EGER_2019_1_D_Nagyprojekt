@@ -37,6 +37,11 @@ if(!isset($_SESSION))
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
+				        	<?php
+							if ( IsUserAdmin() ) {
+							    echo '<li class="menu-active"><a href="?P=admin">Admin menü</a></li>';
+							}
+						  ?>
 				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
 				          <li class="menu-active"><a href="?P=game">Játék</a></li>
 				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>

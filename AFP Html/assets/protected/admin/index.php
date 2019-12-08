@@ -41,8 +41,11 @@
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="?P=admin">Admin menü</a></li>
+						  <li class="menu-active"><a href="?P=home">Kezdőoldal</a></li>
 				          <li class="menu-active"><a href="?P=insert">Hozzáadás</a></li>
-						  <li class="menu-active"><a href="?P=delete">Törlés</a></li>
+				          <li class="menu-active"><a href="?P=list">Módosítás</a></li>
+						  <li class="menu-active"><a href="?P=list">Törlés</a></li>
 				          <li class="menu-active"><a href="?P=logout">Kijelentkezés</a></li>
 				        </ul>
 				      </nav>		    		
@@ -62,6 +65,20 @@
 					</div>
 				</div>
 			</section>
+
+			<section class="team-area section-gap team-page-teams" id="team">
+					<div class="container">
+						<div class="row justify-content-center d-flex align-items-center">
+							<div class="col-md-6 single-team">
+								<div class="meta-text mt-30 text-center">
+									<a href="?P=insert"><input name="insert" value="Hozzáadás" class="genric-btn primary"></a>
+									<a href="?P=list"><input name="modify" value="Módosítás" class="genric-btn primary"></a>
+									<a href="?P=list"><input name="delete" value="Törlés" class="genric-btn primary"></a>
+								</div>
+							</div>	
+						</div>
+					</div>	
+				</section>
 			
 			
 			

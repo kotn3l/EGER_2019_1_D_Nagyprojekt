@@ -11,9 +11,9 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 			case 'logout': UserLogout(); break;
 			case 'game': require_once PROTECTED_DIR.'game.php'; break;
 			case 'home': require_once PROTECTED_DIR.'index.php'; break;
-			case 'info': require_once PROTECTED_DIR.'info.html'; break;
+			case 'info': require_once PROTECTED_DIR.'info.php'; break;
 			case 'toplist': require_once PROTECTED_DIR.'top.php'; break;
-			case 'team': require_once PROTECTED_DIR.'team.html'; break;
+			case 'team': require_once PROTECTED_DIR.'team.php'; break;
 
 			case 'insert': require_once PROTECTED_ADMIN_DIR.'insert.php'; break;
 			case 'list': require_once PROTECTED_ADMIN_DIR.'list.php'; break;
@@ -37,9 +37,9 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 			case 'register': require_once PROTECTED_DIR.'register.php'; break;
 			case 'login': require_once PROTECTED_DIR.'login.php'; break;
 			case 'home': require_once PROTECTED_DIR.'index.php'; break;
-			case 'info': require_once PROTECTED_DIR.'info.html'; break;
+			case 'info': require_once PROTECTED_DIR.'info.php'; break;
 			case 'toplist': require_once PROTECTED_DIR.'top.php'; break;
-			case 'team': require_once PROTECTED_DIR.'team.html'; break;
+			case 'team': require_once PROTECTED_DIR.'team.php'; break;
 			default: require_once PROTECTED_DIR.'index.php'; break;
 		}
 	}
