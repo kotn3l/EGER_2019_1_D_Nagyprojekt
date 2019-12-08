@@ -67,7 +67,7 @@
 			</section>
 			
 				<?php 
-				$query = "SELECT id, question, choice_a, choice_b, choice_c, choice_d, answer FROM question ORDER BY id ASC";
+				$query = "SELECT id, question, choice_a, choice_b, choice_c, choice_d, answer, difficulty FROM questions ORDER BY id ASC";
 				$params = [];
 				require_once PROTECTED_DIR.'database.php';
 				$records = getList($query, $params);
@@ -82,6 +82,7 @@
 							<th>C</th>
 							<th>D</th>
 							<th>Megoldás</th>
+							<th>Nehézség</th>
 						</tr>
 						<?php foreach ($records as $record): ?>
 							<tr style="text-align: center;">
@@ -91,6 +92,7 @@
 								<td><?=$record['choice_c']?></td>
 								<td><?=$record['choice_d']?></td>
 								<td><?=$record['answer']?></td>
+								<td><?=$record['difficulty']?></td>
 								<td><a href="?P=modify&id=<?=$record['id']?>">E</a></td>
 								<td><a href="?P=delete&d=<?=$record['id']?>">X</a></td>
 							</tr>
