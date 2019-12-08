@@ -12,3 +12,4 @@ define('DB_NAME','labor');
 define('DB_USER','root');
 define('DB_PASS','');
 define('DB_CHARSET', 'utf8');
+define('DB_PORT','3308');
