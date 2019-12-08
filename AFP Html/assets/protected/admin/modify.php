@@ -78,10 +78,11 @@
 		$choice_c = $_POST['choice_c'];
 		$choice_d = $_POST['choice_d'];
 		$answer = $_POST['answer'];
+		$difficulty = $_POST['difficulty'];
 
 		if($id == $_GET['id']) {
 
-			$query = "UPDATE `question` SET `question` = :question, `choice_a` = :choice_a, `choice_b` = :choice_b, `choice_c` = :choice_c, `choice_d` = :choice_d, `answer` = :answer  WHERE `id` = :id";
+			$query = "UPDATE `questions` SET `question` = :question, `choice_a` = :choice_a, `choice_b` = :choice_b, `choice_c` = :choice_c, `choice_d` = :choice_d, `answer` = :answer, `difficulty` = :difficulty WHERE `id` = :id";
 			$params = [
 				':question' => $question,
 				':choice_a' => $choice_a,
@@ -89,6 +90,7 @@
 				':choice_c' => $choice_c,
 				':choice_d' => $choice_d,
 				':answer' => $answer,
+				':difficulty' => $difficulty,
 				':id' => $id
 			];
 			require_once PROTECTED_DIR.'database.php';
@@ -98,7 +100,7 @@
 		} else echo 'ID-s don\'t match';
 	}
 
-	$query = "SELECT `id`, `question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer` FROM `question` WHERE `id` = :id";
+	$query = "SELECT `id`, `question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`, `difficulty` FROM `questions` WHERE `id` = :id";
 	$params = [
 		':id' => $_GET['id']
 	];
@@ -119,6 +121,7 @@
 			<option value="3">C</option>
 			<option value="4">D</option>
 		</select>
+		<input type="text" name="difficulty" placeholder="Nehézség" value="<?=$record['difficulty']?>">
 		<input type="submit" name="submit" value="Módosítás">
 	</form>
 <?php endif; ?>
