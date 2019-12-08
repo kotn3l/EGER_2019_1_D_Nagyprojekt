@@ -37,11 +37,6 @@ if(!isset($_SESSION))
 				      </div>
 				      <nav id="nav-menu-container">
 				        <ul class="nav-menu">
-				        	<?php
-							if ( IsUserAdmin() ) {
-							    echo '<li class="menu-active"><a href="?P=admin">Admin menü</a></li>';
-							}
-						  ?>
 				          <li class="menu-active"><a href="?P=home">Kezdőlap</a></li>
 				          <li class="menu-active"><a href="?P=game">Játék</a></li>
 				          <li class="menu-active"><a href="?P=info">Játékleírás</a></li>
@@ -72,21 +67,37 @@ if(!isset($_SESSION))
 			</section>
 
 
+			<?php 
+
+				$query = "SELECT question, choice_a, choice_b, choice_c, choice_d, answer FROM questions WHERE difficulty = 1 ORDER BY RAND() LIMIT 1";
+				$params = [];
+				require_once PROTECTED_DIR.'database.php';
+				$record = getRecord($query, $params);
+				
+				$buttonQuestion = $record[0];
+				$button1 = $record[1];
+				$button2 = $record[2];
+				$button3 = $record[3];
+				$button4 = $record[4];
+				$answer = $record[5];
+			
+			?>
+
 			<section class="team-area section-gap team-page-teams">
 				<center><h1 class="text-black" id="point"></h1></center>
 				<div class="container" id="game">
 					<div class="row justify-content-left d-flex align-items-center">
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
-							<div class="button" id="button1" class="jatek-gomb" onclick="ellenorzes(this)">1</div>
-							<div class="button" id="button2" class="jatek-gomb" onclick="ellenorzes(this)">2</div>
-							<div class="button" id="button3" class="jatek-gomb" onclick="ellenorzes(this)">3</div>
-							<div class="button" id="button4" class="jatek-gomb" onclick="ellenorzes(this)">4</div>
+							<div class="button" id="button1" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button1; ?></div>
+							<div class="button" id="button2" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button2; ?></div>
+							<div class="button" id="button3" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button3; ?></div>
+							<div class="button" id="button4" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button4; ?></div>
 							</div>
 						</div>
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
-								<div class="button2" id="buttonQuestion">ebben a gombban lesz a kérdés</div>
+								<div class="button2" id="buttonQuestion"><?php echo $buttonQuestion; ?></div>
 							</div>
 						</div>
 
@@ -100,7 +111,10 @@ if(!isset($_SESSION))
 				</div>
 			</section>
 
+
+
 <?php 
+
 	if(array_key_exists('submit', $_POST)) {
 		$name = getUserName();
 		$points = $_POST['points'];
@@ -157,6 +171,7 @@ if(!isset($_SESSION))
 				</div>
 			</footer>
 
+			<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 			<script src="js/vendor/bootstrap.min.js"></script>			
@@ -175,7 +190,8 @@ if(!isset($_SESSION))
 			<script src="js/parallax.min.js"></script>		
 			<script src="js/mail-script.js"></script>	
 			<script src="js/main.js"></script>
-			<script src="js/game.js"></script>
+			<script src="js/game.js"></script> 
+			
 		</body>
 
 	</html>
