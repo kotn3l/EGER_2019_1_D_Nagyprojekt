@@ -67,7 +67,7 @@
 			</section>
 			
 				<?php 
-				$query = "SELECT id, question, choice_a, choice_b, choice_c, choice_d, answer, difficulty FROM questions ORDER BY id ASC";
+				$query = "SELECT id, question, choice_a, choice_b, choice_c, choice_d, answer, difficulty FROM questions ORDER BY id DESC";
 				$params = [];
 				require_once PROTECTED_DIR.'database.php';
 				$records = getList($query, $params);
