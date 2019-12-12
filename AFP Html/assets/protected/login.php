@@ -89,7 +89,7 @@
 										<input type="password" name="password" placeholder="Jelszó" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
 									</td>
 							    </tr>
-							    <tr>
+							    <tr height="150">
 							    	<td>
 							    		<input type="submit" name="login" value="Bejelentkezés" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;">
 							    	</td>

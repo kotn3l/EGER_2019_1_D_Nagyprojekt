@@ -69,31 +69,36 @@
 						</div>
 				</section>
 
-				<?php 
-				$query = "SELECT id, name, points FROM toplist ORDER BY points DESC";
-				$params = [];
-				require_once PROTECTED_DIR.'database.php';
-				$records = getList($query, $params);
-				?>
 
-				<?php if($records != null && !empty($records)): ?>
-					<table>
-						<tr>
-							<th>Helyezés</th>
-							<th>Név</th>
-							<th>Pontszám</th>
-						</tr>
-						<?php foreach ($records as $key=>$record): ?>
-							<tr style="text-align: center;">
-								<td><?=$key+1?></td>
-								<td><?=$record['name']?></td>
-								<td><?=$record['points']?></td>
-							</tr>
-						<?php endforeach; ?>
-					</table>
-				<?php else: ?>
-					<p>Nincs eredmény az adatbázisban</p>
-				<?php endif; ?>
+				<section class="toplist-area section-gap toplist-page-toplist" id="toplist">
+					<div class="container" align="center">
+						<?php 
+						$query = "SELECT id, name, points FROM toplist ORDER BY points DESC";
+						$params = [];
+						require_once PROTECTED_DIR.'database.php';
+						$records = getList($query, $params);
+						?>
+
+						<?php if($records != null && !empty($records)): ?>
+							<table align="center" style="font-size: 20px; border: 3px solid black;">
+								<tr style="text-align: center; border: 3px solid black;" height="50">
+									<th>Helyezés</th>
+									<th>Név</th>
+									<th>Pontszám</th>
+								</tr>
+								<?php foreach ($records as $key=>$record): ?>
+									<tr style="text-align: center; border: 1px solid black;">
+										<td width="125" height="30"><?=$key+1?></td>
+										<td width="125"><?=$record['name']?></td>
+										<td width="125"><?=$record['points']?></td>
+									</tr>
+								<?php endforeach; ?>
+							</table>
+						<?php else: ?>
+							<p>Nincs eredmény az adatbázisban</p>
+						<?php endif; ?>
+					</div>
+				</section>
 
 				<footer class="footer-area section-gap">
 					<div class="container">

@@ -61,10 +61,7 @@
 				</div>
 			</section>
 			
-			<section class="team-area section-gap team-page-teams" id="login">
-				<div class="container">
-						
-
+			<section class="register-area section-gap register-page-register" id="register">
 						<form method="post">
 							<table align="center">
 								<tr>
@@ -102,7 +99,7 @@
 										<input type="email" name="email" placeholder="E-mail" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
 									</td>
 							    </tr>
-							    <tr>
+							    <tr height="150">
 							    	<td>
 							    		<input type="submit" name="register" value="Regisztráció" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;">
 							    	</td>
@@ -113,8 +110,6 @@
 							    </tr>
 						    </table>
 						</form>
-						
-				</div>	
 			</section>
 			
 			<footer class="footer-area section-gap">
