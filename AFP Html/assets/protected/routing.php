@@ -21,7 +21,7 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 
 			case 'delete': 
 			if(array_key_exists('d', $_GET) && !empty($_GET['d'])) {
-				$query = "DELETE FROM `question` WHERE id = :id";
+				$query = "DELETE FROM `questions` WHERE id = :id";
 				$params = [ ':id' => $_GET['d'] ];
 				require_once PROTECTED_DIR.'database.php';
 				executeDML($query, $params);
