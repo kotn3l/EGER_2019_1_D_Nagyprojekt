@@ -1,0 +1,24 @@
+Mit csinálok: Nincs aktív bejelentkezés. URL-be beírom a game.php-t. 
+Mit várok: Hogy ne engedjen a játék fülre.
+Mi történik: Visszadob a kezdőlapra.
+Hibajavítás: -
+
+Mit csinálok: Bejelentkezek a user felhasználóval.
+Mit várok: Hogy megjelenik a játék gomb. 
+Mi történik: Megjelenik a játék gomb, tudunk játszani.
+Hibajavítás: - 
+
+Mit csinálok: Játszom. Megnyomom a helyes válasz gombját. 
+Mit várok: Hogy a gomb zöldre váltson és a pontszámom növekedjen.
+Mi történik: Az összes gomb pirosra vált, a kérdés nem változik és a pontszám sem növekszik.
+Hibajavítás: Javascriptben az Ellenorzes() metódusban elírást kellett javítani. Két dimenziós tömb helyes indexelése után sikeres volt a tesztelés.
+
+Mit csinálok: Kérdést törlök az adatbázisból.
+Mit várok: Hogy kitörli az adott sort.
+Mi történik: Visszadob a kezdőoldalra, a törlést nem hajtja végre.
+Hibajavítás: A tábla neve el volt írva. `question` -> `questions`
+
+Mit csinálok: Kérdést adok hozzá az adatbázishoz, de nem töltök ki minden mezőt.
+Mit várok: Hogy hibaüzenetet kapok az üres mező miatt.
+Mi történik: Beilleszti üres értékekkel a táblába.
+Hibajavítás: Vizsgálat empty($mezonev) függvények segítségével.
