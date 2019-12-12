@@ -234,10 +234,14 @@
           <p>Játék felület:<br>
             &emsp;A kvízjáték aktuális kezdése előtt lehetőségünknek kell lenni arra, hogy nehézségi szintet és kérdés témaköröket válasszunk.<br>&emsp;Aztán a kérdés megválaszolása után, attól függően, hogy jól válaszoltunk-e vagy sem, a jelenlegi pontjainkhoz hozzáadásra vagy levonásra kerül egy érték a nehézségtől függően.<br>&emsp;Ha egy kérdésre nem is sejtjük a választ, felhasználhatjuk a három segítségünk bármelyikét, de mindet csak egyszer, az egész játék alatt. A játék véget ér, ha: 0 vagy az alá csökken a pontszámunk.</p><br>
           <p>Oldal rezponzivitási teszt:<br>
-            &emsp;
+            &emsp;Elvárás: Az oldalon megjelenő elemeknek az ablak méretazésével együtt kell változniuk, valamint a menüsávnak egy adott érték elérése után legördülő formáta kell váltania.<br>
+            &emsp;Teszt: Az oldalat Microsoft Edge böngészőben megnyitva először a beépített "kis ablakmérettel" csökkentettem, ezek után pedig egér segítségével folyamatos csökkentést/növelést alkalmaztam.<br>
+            &emsp;Eredmény: Az elemek mérete az ablak méretévl együtt változnak hiba nélkül, valamint a menüsáv formája is átalakul az adott érték elérésekor.
           </p><br>
           <p>Több böngészős futtatás:<br>
-            &emsp;
+            &emsp;Elvárás: Az oldalt ne csak egy adott böngészővel lehessen futtatni, valamint a különböző böngészőkben is végbemenjenek a rezponzív elemek átalakulásai.<br>
+            &emsp;Teszt: Google Chrome, Mozzilla Firefox és Microsoft Edge böngészővel teszteltem az oldalt.<br>
+            &emsp;Eredmény: Mind három böngészőben kifogástalanul működik az oldal, egyikben sincs hiba a rezponzivitással.
           </p><br>
           <p>Pontszámláló működése:<br>
             &emsp;Ha a játékos az adott kérdésre jól válaszol akkor az adott kérdés nehézségétől függően fog pontot kapni ami az eddig elért pontszámjaihoz adódik majd hozzá.<br>&emsp;Illetve ha a játékos nem tudja helyesen a választ a kérdésre, akkor ugyan úgy a kérdés nehézségétől függően fog majd pont levonódni az eddigi elért pontjaiból.<br>&emsp;A játék során egyre nehezebb kérdéseket kapunk, ami egyenesen irányos azzal, hogy egyre több pontot is fogunk majd kapni, ha helyesen válaszoljuk azt meg, de ez azt is jelenti, hogy minél tovább jutunk a játékban annál több pontot veszítünk ha egy választ nem helyesen válaszolunk, pluszban a helytelen válasz esetén a helyes válaszunk után kapott volna pont 150%át fogja levonni, azaz könnyű hamar lenulláznunk magunkat.</p><br>
