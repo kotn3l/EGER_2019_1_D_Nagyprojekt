@@ -72,39 +72,37 @@ if(!isset($_SESSION))
 			</section>
 
 
-			<?php 
-				$difficulty = 1;
-				$query = "SELECT question, choice_a, choice_b, choice_c, choice_d, answer FROM questions WHERE difficulty = ".$difficulty." ORDER BY RAND() LIMIT 1";
-				$params = [];
+			<?php
+				$array = array();
 				require_once PROTECTED_DIR.'database.php';
-				$record = getRecord($query, $params);
-				
-				$buttonQuestion = $record[0];
-				$button1 = $record[1];
-				$button2 = $record[2];
-				$button3 = $record[3];
-				$button4 = $record[4];
-				$answer = $record[5];
-			
+				for ($i=1; $i < 11; $i++) {
+					$query = "SELECT question, choice_a, choice_b, choice_c, choice_d, answer FROM questions WHERE difficulty = ".$i." ORDER BY RAND() LIMIT 1";
+					$params = [];
+					$record = getRecord($query, $params);
+
+					$array[$i-1] = array($record[0],$record[1],$record[2],$record[3],$record[4],$record[5]);
+				} 
+				$out = array_values($array);
+
+				echo "<script>var questions = " . json_encode($out) . "; </script>";
 			?>
 
-			<div id="content" />
-
 			<section class="team-area section-gap team-page-teams">
+				<center><h1 class="text-black" id="difficulty"></h1></center>
 				<center><h1 class="text-black" id="point"></h1></center>
 				<div class="container" id="game">
 					<div class="row justify-content-left d-flex align-items-center">
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
-							<div class="button" id="button1" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button1; ?></div>
-							<div class="button" id="button2" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button2; ?></div>
-							<div class="button" id="button3" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button3; ?></div>
-							<div class="button" id="button4" class="jatek-gomb" onclick="ellenorzes(this, '<?php echo $answer?>')"><?php echo $button4; ?></div>
+							<div class="button" id="button1" class="jatek-gomb" onclick="ellenorzes(this)">Válasz 1</div>
+							<div class="button" id="button2" class="jatek-gomb" onclick="ellenorzes(this)">Válasz 2</div>
+							<div class="button" id="button3" class="jatek-gomb" onclick="ellenorzes(this)">Válasz 3</div>
+							<div class="button" id="button4" class="jatek-gomb" onclick="ellenorzes(this)">Válasz 4</div>
 							</div>
 						</div>
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
-								<div class="button2" id="buttonQuestion"><?php echo $buttonQuestion; ?></div>
+								<div class="button2" id="buttonQuestion">Kérdés</div>
 							</div>
 						</div>
 
