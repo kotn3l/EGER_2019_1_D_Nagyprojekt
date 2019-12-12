@@ -96,9 +96,14 @@
 												':difficulty' => $difficulty
 											];
 											require_once PROTECTED_DIR.'database.php';
-											$success = executeDML($query, $params);
-											if($success) echo '<td colspan="7" align="center"  style="font-size:26px">Sikeres beillesztés!</td>';
-											else echo '<td colspan="7" align="center" style="font-size:26px">Hiányzó adatok!</td>';
+											if(empty($question) || empty($choice_a) || empty($choice_b) || empty($choice_c) || empty($choice_d) || empty($answer) || empty($difficulty)) {
+									    		echo '<td colspan="7" align="center" style="font-size:26px">Hiányzó adatok!</td>';
+											} else {
+												$success = executeDML($query, $params);
+												if($success) echo '<td colspan="7" align="center"  style="font-size:26px">Sikeres beillesztés!</td>';	
+												else echo '<td colspan="7" align="center" style="font-size:26px">Hiba!</td>';
+											}
+											
 
 										}
 										?>
