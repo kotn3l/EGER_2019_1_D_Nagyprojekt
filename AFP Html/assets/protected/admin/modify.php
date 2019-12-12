@@ -55,7 +55,7 @@
 			
 			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
-				<div class="container">
+			<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
@@ -66,7 +66,7 @@
 				</div>
 			</section>
 			
-				<?php 
+<?php 
 	if(array_key_exists('id', $_GET) && !empty($_GET['id'])) :
 
 	if(array_key_exists('submit', $_POST)) {
@@ -97,6 +97,7 @@
 			$success = executeDML($query, $params);
 			if($success) header('Location: ?P=list');
 			else echo 'Error during insert';
+
 		} else echo 'ID-s don\'t match';
 	}
 
@@ -108,22 +109,60 @@
 	$record = getRecord($query, $params);
 	?>
 
-	<form method="post">
-		<input type="hidden" name="id" value="<?=$record['id']?>">
-		<input type="text" name="question" placeholder="Kérdés" value="<?=$record['question']?>">
-		<input type="text" name="choice_a" placeholder="A" value="<?=$record['choice_a']?>">
-		<input type="text" name="choice_b" placeholder="B" value="<?=$record['choice_b']?>">
-		<input type="text" name="choice_c" placeholder="C" value="<?=$record['choice_c']?>">
-		<input type="text" name="choice_d" placeholder="D" value="<?=$record['choice_d']?>">
-		<select name="answer">
-			<option value="1">A</option>
-			<option value="2">B</option>
-			<option value="3">C</option>
-			<option value="4">D</option>
-		</select>
-		<input type="text" name="difficulty" placeholder="Nehézség" value="<?=$record['difficulty']?>">
-		<input type="submit" name="submit" value="Módosítás">
-	</form>
+	<section class="team-insert section-gap team-page-insert" id="insert">
+					<div class="container">
+						<form method="post">
+							<table>
+								
+								<tr align="center">
+									<th>Kérdés</th>
+									<th>Válasz 1</th>
+									<th>Válasz 2</th>
+									<th>Válasz 3</th>
+									<th>Válasz 4</th>
+									<th width="125">Helyes válasz</th>
+									<th  width="125">Nehézség</th>
+								</tr>
+								<tr>
+									<input type="hidden" name="id" value="<?=$record['id']?>">
+									<td><input type="text" name="question" placeholder="Kérdés" value="<?=$record['question']?>" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_a" placeholder="A" value="<?=$record['choice_a']?>" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_b" placeholder="B" value="<?=$record['choice_b']?>" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_c" placeholder="C" value="<?=$record['choice_c']?>" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_d" placeholder="D" value="<?=$record['choice_d']?>" style="text-align:center;"></td>
+									<td align="center">
+									<select name="answer" style="width:50px; text-align-last:center;">
+										<option value="A" <?php if($record['answer'] == 'A') echo 'selected' ?>>A</option>
+										<option value="B" <?php if($record['answer'] == 'B') echo 'selected' ?>>B</option>
+										<option value="C" <?php if($record['answer'] == 'C') echo 'selected' ?>>C</option>
+										<option value="D" <?php if($record['answer'] == 'D') echo 'selected' ?>>D</option>
+									</select>
+									</td>
+									<td align="center">
+									<select name="difficulty" style="width:50px;  text-align-last:center;">
+										<option value="1" <?php if($record['difficulty'] == '1') echo 'selected' ?>>1</option>
+										<option value="2" <?php if($record['difficulty'] == '2') echo 'selected' ?>>2</option>
+										<option value="3" <?php if($record['difficulty'] == '3') echo 'selected' ?>>3</option>
+										<option value="4" <?php if($record['difficulty'] == '4') echo 'selected' ?>>4</option>
+										<option value="5" <?php if($record['difficulty'] == '5') echo 'selected' ?>>5</option>
+										<option value="6" <?php if($record['difficulty'] == '6') echo 'selected' ?>>6</option>
+										<option value="7" <?php if($record['difficulty'] == '7') echo 'selected' ?>>7</option>
+										<option value="8" <?php if($record['difficulty'] == '8') echo 'selected' ?>>8</option>
+										<option value="9" <?php if($record['difficulty'] == '9') echo 'selected' ?>>9</option>
+										<option value="10" <?php if($record['difficulty'] == '10') echo 'selected' ?>>10</option>
+									</select>
+									</td>
+								</tr>
+								<tr style="height:100px;">
+									<td colspan="7" align="center">
+										<input class="genric-btn primary" type="submit" name="submit" value="Módosítás" style="height:70px; width:300px; font-size:20px;">
+									</td>
+								</tr>
+							</table>
+							
+						</form>
+					</div>	
+				</section>
 <?php endif; ?>
 			
 			

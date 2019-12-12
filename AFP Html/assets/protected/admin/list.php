@@ -75,7 +75,7 @@
 
 				<?php if($records != null && !empty($records)): ?>
 					<table>
-						<tr>
+						<tr align="center" style="font-size:20px;">
 							<th>Kérdés</th>
 							<th>A</th>
 							<th>B</th>

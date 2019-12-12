@@ -67,18 +67,17 @@
 			</section>
 
 			<section class="team-area section-gap team-page-teams" id="team">
-					<div class="container">
-						<div class="row justify-content-center d-flex align-items-center">
-							<div class="col-md-6 single-team">
-								<div class="meta-text mt-30 text-center">
-									<a href="?P=insert"><input name="insert" value="Hozzáadás" class="genric-btn primary"></a>
-									<a href="?P=list"><input name="modify" value="Módosítás" class="genric-btn primary"></a>
-									<a href="?P=list"><input name="delete" value="Törlés" class="genric-btn primary"></a>
-								</div>
-							</div>	
-						</div>
-					</div>	
-				</section>
+				<div class="container">
+					<div class="row justify-content-center d-flex align-items-center">
+						<div class="col-md-10 single-team">
+						 	<div class="meta-text mt-30 text-center">
+								<a href="?P=insert"><input type="submit" class="genric-btn primary" style="height:70px; width:300px; font-size:20px; top:50%;" value="Hozzáadás"></a>
+								<a href="?P=list"><input type="submit" class="genric-btn primary" style="height:70px; width:300px; font-size:20px;  top:50%;" value="Módosítás"></a>
+								<a href="?P=list"><input type="submit" class="genric-btn primary" style="height:70px; width:300px; font-size:20px;" value="Törlés"></a>
+						   </div>
+					</div>
+				</div>	
+			</section>
 			
 			
 			

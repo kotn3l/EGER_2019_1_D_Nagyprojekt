@@ -66,47 +66,93 @@
 				</div>
 			</section>
 			
-				<?php 
-				if(array_key_exists('submit', $_POST)) {
+				
 
-					$question = $_POST['question'];
-					$choice_a = $_POST['choice_a'];
-					$choice_b = $_POST['choice_b'];
-					$choice_c = $_POST['choice_c'];
-					$choice_d = $_POST['choice_d'];
-					$answer = $_POST['answer'];
-					$difficulty = $_POST['difficulty'];
+				<section class="team-insert section-gap team-page-insert" id="insert">
+					<div class="container">
+						<form method="post">
+							<table>
+								<tr>
+									<?php 
+										if(array_key_exists('submit', $_POST)) {
+
+											$question = $_POST['question'];
+											$choice_a = $_POST['choice_a'];
+											$choice_b = $_POST['choice_b'];
+											$choice_c = $_POST['choice_c'];
+											$choice_d = $_POST['choice_d'];
+											$answer = $_POST['answer'];
+											$difficulty = $_POST['difficulty'];
 
 
-					$query = "INSERT INTO `questions` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`, `difficulty`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer, :difficulty)";
-					$params = [
-						':question' => $question,
-						':choice_a' => $choice_a,
-						':choice_b' => $choice_b,
-						':choice_c' => $choice_c,
-						':choice_d' => $choice_d,
-						':answer' => $answer,
-						':difficulty' => $difficulty
-					];
-					require_once PROTECTED_DIR.'database.php';
-					$success = executeDML($query, $params);
-					if($success) echo 'Successfull insert';
-					else echo 'Error during insert';
+											$query = "INSERT INTO `questions` (`question`, `choice_a`, `choice_b`, `choice_c`, `choice_d`, `answer`, `difficulty`) VALUES (:question, :choice_a, :choice_b, :choice_c, :choice_d, :answer, :difficulty)";
+											$params = [
+												':question' => $question,
+												':choice_a' => $choice_a,
+												':choice_b' => $choice_b,
+												':choice_c' => $choice_c,
+												':choice_d' => $choice_d,
+												':answer' => $answer,
+												':difficulty' => $difficulty
+											];
+											require_once PROTECTED_DIR.'database.php';
+											$success = executeDML($query, $params);
+											if($success) echo '<td colspan="7" align="center"  style="font-size:26px">Sikeres beillesztés!</td>';
+											else echo '<td colspan="7" align="center" style="font-size:26px">Hiányzó adatok!</td>';
 
-				}
-				?>
+										}
+										?>
+								</tr>
+								<tr align="center">
+									<th>Kérdés</th>
+									<th>Válasz 1</th>
+									<th>Válasz 2</th>
+									<th>Válasz 3</th>
+									<th>Válasz 4</th>
+									<th width="125">Helyes válasz</th>
+									<th  width="125">Nehézség</th>
+								</tr>
+								<tr>
+									<td><input type="text" name="question" placeholder="" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_a" placeholder="" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_b" placeholder="" style="text-align:center;"></td>
+								    <td><input type="text" name="choice_c" placeholder=""  style="text-align:center;"></td>
+								    <td><input type="text" name="choice_d" placeholder=""  style="text-align:center;"></td>
+									<td align="center">
+									<select name="answer"  style="width:50px; text-align-last:center;">
+										<option value="A">A</option>
+										<option value="B">B</option>
+										<option value="C">C</option>
+										<option value="D">D</option>
+									</select>
+									</td>
+									<td align="center">
+									<select name="difficulty" style="width:50px;  text-align-last:center;">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+										<option value="6">6</option>
+										<option value="7">7</option>
+										<option value="8">8</option>
+										<option value="9">9</option>
+										<option value="10">10</option>
+									</select>
+									</td>
+								</tr>
+								<tr style="height:100px;">
+									<td colspan="7" align="center">
+										<input class="genric-btn primary" type="submit" name="submit" value="Hozzáadás" style="height:70px; width:300px; font-size:20px;">
+									</td>
+								</tr>
+							</table>
+							
+						</form>
+					</div>	
+				</section>
 
-				<form method="post">
-					<input type="text" name="question" placeholder="Kérdés"><br>
-					<input type="text" name="choice_a" placeholder="Válasz 1"><input type="radio" name="answer" value="1"><br>
-					<input type="text" name="choice_b" placeholder="Válasz 2"><input type="radio" name="answer" value="2"><br>
-					<input type="text" name="choice_c" placeholder="Válasz 3"><input type="radio" name="answer" value="3"><br>
-					<input type="text" name="choice_d" placeholder="Válasz 4"><input type="radio" name="answer" value="4"><br>
-					<input type="text" name="difficulty" placeholder="Nehézség">
-					<input type="submit" name="submit" value="Insert">
-				</form>
-			
-			
+				
 			<footer class="footer-area section-gap">
 				<div class="container">
 					<div class="row">
