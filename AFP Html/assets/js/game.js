@@ -7,65 +7,76 @@ var points;
 var question = 0;
 var parts;
 var difficulty;
+
+//var obj = "<?php echo json_encode($json_array); ?>";
+
 function newgame() {
 
 	points = 0;
 	question = 0;
 	difficulty = 1;
+	document.getElementById("difficulty").innerHTML = "Nehézség: " + difficulty;
 	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
 	document.getElementById("game").style.display="block";
 	document.getElementById("endgame").style.display = "none";
 	document.getElementById("points").value = points;
-
+	rndQuestion();
 
 }
 
-function ellenorzes(element, answer) {
+function ellenorzes(element) {
 	var i;
-	var btn;
+	var ans;
 
-	switch (answer) {
+	switch (questions[points][5]) {
 		case 'A':
-			btn = document.getElementById("button1");
+			ans = 1;
 			break;
 		case 'B':
-			btn = document.getElementById("button2");
+			ans = 2;
 			break;
 		case 'C':
-			btn = document.getElementById("button3");
+			ans = 3;
 			break;
 		case 'D':
-			btn = document.getElementById("button4");
+			ans = 4;
+			break;
+		default: 
+			ans = 0;
 			break;
 	}
-
-	if (btn == element) {
+	if (questions[points][ans] == element.innerHTML) {
 		element.style.background='green';
 		points++;
 		difficulty++;
-		document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
 	}
 	else {
 		for(i=1; i<5; i++) {
 			var button = document.getElementById("button" + i);
-			if (btn == button) {
+			if (questions[points][ans] == button.innerHTML) {
 				button.style.background='green';
 			} else {
 				button.style.background='red';
 			}
 		}
+		setTimeout(endGame, 1500);
 	}
 	
 	if (question < 10) {
 		question++;
-		setTimeout(refreshData, 1500);
+		setTimeout(rndQuestion, 1500);
 	}
 	if (question == 10) {
-		document.getElementById("game").style.display="none";
-		document.getElementById("endgame").style.display = "block";
-		document.getElementById("points").value = points;
-		document.getElementById("point").innerHTML = "Elért pontszám: " + points + "/10";
+		endGame();
 	} 		
+}
+
+function endGame() {
+	document.getElementById("game").style.display="none";
+	document.getElementById("difficulty").style.display="none";
+	document.getElementById("endgame").style.display = "block";
+	document.getElementById("points").value = points;
+	document.getElementById("point").innerHTML = "Elért pontszám: " + points + "/10";
 }
 
 function rndQuestion(){
@@ -73,23 +84,20 @@ function rndQuestion(){
 		var button = document.getElementById("button" + i);
 		button.style.background='lightgrey';
 	}
+	document.getElementById("difficulty").innerHTML = "Nehézség: " + difficulty;
+	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
+	document.getElementById("button1").innerHTML = questions[points][1];
+	document.getElementById("button2").innerHTML = questions[points][2];
+	document.getElementById("button3").innerHTML = questions[points][3];
+	document.getElementById("button4").innerHTML = questions[points][4];
+	document.getElementById("buttonQuestion").innerHTML = questions[points][0];
 
 }
 
-
 function refreshData(){
-	  var display = document.getElementById("content");
-      var xmlhttp = new XMLHttpRequest();
-      var difficulty = document.getElementById("difficulty");
-      xmlhttp.open("GET", "?P=next");
-      xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-      xmlhttp.send(difficulty);
-      xmlhttp.onreadystatechange = function() {
-        if (this.readyState === 4 && this.status === 200) {
-        	display.innerHTML = this.responseText;
-        	document.getElementById("point").innerHTML = "Pontszám: " + points + "/10";
-        } else {
+	rndQuestion();
+}
 
-        };
-      }
-    }
+function giveResult(result) {
+	document.getElementById("result").innerHTML = result;
+}
