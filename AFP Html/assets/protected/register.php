@@ -63,30 +63,56 @@
 			
 			<section class="team-area section-gap team-page-teams" id="login">
 				<div class="container">
-						<?php
-						if(array_key_exists('register', $_POST)) {
-						    $username = $_POST['username'];
-						    $password = $_POST['password'];
-						    $name = $_POST['name'];
-						    $email = $_POST['email'];
-
-						    if(empty($username) || empty($password) || empty($name) || empty($email))
-						        echo "Hiányozó adat(ok)!";
-						    else if(!UserRegister($username, $password, $name, $email))
-						        echo "Helytelen adatok";
-						}
-						?>
+						
 
 						<form method="post">
-						    <input type="text" name="username" placeholder="Felhasználónév"><br>
-						    <input type="password" name="password" placeholder="Jelszó"><br>
-						    <input type="text" name="name" placeholder="Név"><br>
-						    <input type="email" name="email" placeholder="Email"><br>
-						    <input type="submit" name="register" value="Regisztráció" class="genric-btn primary">
-						</form>
+							<table align="center">
+								<tr>
+									<?php
+									if(array_key_exists('register', $_POST)) {
+									    $username = $_POST['username'];
+									    $password = $_POST['password'];
+									    $name = $_POST['name'];
+									    $email = $_POST['email'];
 
-						<br>
-						<a href="?P=login" class="genric-btn primary">Bejelentkezés</a>
+									    if(empty($username) || empty($password) || empty($name) || empty($email))
+									    	echo '<td colspan="4" align="center"  style="font-size:26px">Hiányzó adatok!</td>';
+									    else if(!UserRegister($username, $password, $name, $email))
+									        echo '<td colspan="4" align="center"  style="font-size:26px">Helytelen adatok!</td>';
+									}
+									?>
+								</tr>
+							    <tr>
+							    	<td colspan="4" align="center">
+										<input type="text" name="username" placeholder="Felhasználónév" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4" align="center">
+										<input type="password" name="password" placeholder="Jelszó" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+							    </tr>
+							    <tr>
+									<td colspan="4" align="center">
+										<input type="text" name="name" placeholder="Név" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+							    </tr>
+							    <tr>
+									<td colspan="4" align="center">
+										<input type="email" name="email" placeholder="E-mail" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+							    </tr>
+							    <tr>
+							    	<td>
+							    		<input type="submit" name="register" value="Regisztráció" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;">
+							    	</td>
+							    	<td></td>
+							    	<td>
+							    		<a href="?P=login"><input type="button" value="Bejelentkezés" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;"></a>
+							    	</td>
+							    </tr>
+						    </table>
+						</form>
 						
 				</div>	
 			</section>
