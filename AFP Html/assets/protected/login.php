@@ -61,26 +61,47 @@
 				</div>
 			</section>
 			
-			<section class="team-area section-gap team-page-teams" id="login">
-				<div class="container">
-						<?php		
-						if(array_key_exists('login', $_POST)) {
-						    $username = $_POST['username'];
-						    $password = $_POST['password'];
-
-						    if(empty($username) || empty($password))
-						        echo "Hiányozó bejelentkezési adat(ok)!";
-						    else if(!UserLogin($username, $password))
-						        echo "Helytelen bejelentkezési adatok";
-						}
-						?>
+			<section class="login-area section-gap login-page-login" id="login">
+				<div class="container" align="center">
 						<form method="post">
-						    <input type="text" name="username" placeholder="Felhasználónév"><br>
-						    <input type="password" name="password" placeholder="Jelszó"><br>
-						    <input type="submit" name="login" value="Bejelentkezés" class="genric-btn primary">
+							<table>
+								<tr>
+									<?php		
+									if(array_key_exists('login', $_POST)) {
+									    $username = $_POST['username'];
+									    $password = $_POST['password'];
+
+									    if(empty($username) || empty($password))
+									        echo '<td colspan="4" align="center"  style="font-size:26px">Hiányzó bejelentkezési adatok!</td>';
+									    else if(!UserLogin($username, $password))
+									        echo '<td colspan="4" align="center"  style="font-size:26px">Helytelen bejelentkezési adatok!</td>';
+									}
+									?>
+									
+								</tr>
+							    <tr>
+							    	<td colspan="4" align="center">
+										<input type="text" name="username" placeholder="Felhasználónév" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+								</tr>
+								<tr>
+									<td colspan="4" align="center">
+										<input type="password" name="password" placeholder="Jelszó" style="height:70px; width:300px; font-size:20px; text-align-last:center;">
+									</td>
+							    </tr>
+							    <tr>
+							    	<td>
+							    		<input type="submit" name="login" value="Bejelentkezés" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;">
+							    	</td>
+							    	<td></td>
+							    	<td>
+							    		<a href="?P=register"><input type="button" value="Regisztráció" class="genric-btn primary" style="height:70px; width:200px; font-size:20px;"></a>
+							    	</td>
+							    </tr>
+						    </table>
 						</form>
 						<br>
-						<a href="?P=register" class="genric-btn primary">Regisztráció</a>
+						
 						
 				</div>	
 			</section>
