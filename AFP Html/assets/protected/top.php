@@ -86,7 +86,7 @@
 						$result = getRecord($query, $params);
 						$id = $result['id'];
 
-						$query = "SELECT id, name, points FROM toplist ORDER BY points DESC";
+						$query = "SELECT id, name, points FROM toplist ORDER BY points DESC, id DESC";
 						$params = [];
 						require_once PROTECTED_DIR.'database.php';
 						$records = getList($query, $params);
