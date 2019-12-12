@@ -85,6 +85,8 @@ if(!isset($_SESSION))
 				$out = array_values($array);
 
 				echo "<script>var questions = " . json_encode($out) . "; </script>";
+
+				
 			?>
 
 			<section class="team-area section-gap team-page-teams">
@@ -102,7 +104,7 @@ if(!isset($_SESSION))
 						</div>
 						<div class="col-md-6 single-team">
 							<div class="meta-text mt-30 text-center">
-								<div class="button2" id="buttonQuestion">Kérdés</div>
+								<div class="button2" id="buttonQuestion" style="height: 150px; padding-top: 45px; line-height: 30px;">Kérdés</div>
 							</div>
 						</div>
 
@@ -133,7 +135,7 @@ if(!isset($_SESSION))
 		require_once PROTECTED_DIR.'database.php';
 			$success = executeDML($query, $params);
 			if($success) {
-				echo("<script>location.href = '?P=toplist';</script>");
+				echo("<script>location.href = '?P=toplist?url=fromgame';</script>");
 			} else echo 'Error during insert';
 	}
 ?>

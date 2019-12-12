@@ -1,3 +1,9 @@
+<?php
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+?>
 <!DOCTYPE html>
 	<html>
 		<head>
@@ -73,6 +79,13 @@
 				<section class="toplist-area section-gap toplist-page-toplist" id="toplist">
 					<div class="container" align="center">
 						<?php 
+
+						$query = "SELECT id FROM toplist ORDER BY id DESC LIMIT 1";
+						$params = [];
+						require_once PROTECTED_DIR.'database.php';
+						$result = getRecord($query, $params);
+						$id = $result['id'];
+
 						$query = "SELECT id, name, points FROM toplist ORDER BY points DESC";
 						$params = [];
 						require_once PROTECTED_DIR.'database.php';
@@ -87,7 +100,14 @@
 									<th>Pontszám</th>
 								</tr>
 								<?php foreach ($records as $key=>$record): ?>
-									<tr style="text-align: center; border: 1px solid black;">
+									<?php 
+									$params = explode("=", $_GET['P']);
+									if (count($params) == 2 && $params[1] == "fromgame" && $record['id'] == $id) {
+										echo "<tr style='text-align: center; border: 1px solid black;' bgcolor='#00FFFF'>";
+										} else {
+											echo "<tr style='text-align: center; border: 1px solid black;'>";
+										} 
+										?>
 										<td width="125" height="30"><?=$key+1?></td>
 										<td width="125"><?=$record['name']?></td>
 										<td width="125"><?=$record['points']?></td>

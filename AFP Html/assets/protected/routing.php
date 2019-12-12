@@ -13,6 +13,7 @@ $_GET['P'] = (!array_key_exists('P', $_GET)) ? "home" : $_GET['P'];
 			case 'home': require_once PROTECTED_DIR.'index.php'; break;
 			case 'info': require_once PROTECTED_DIR.'info.php'; break;
 			case 'toplist': require_once PROTECTED_DIR.'top.php'; break;
+			case 'toplist?url=fromgame': require_once PROTECTED_DIR.'top.php'; break;
 			case 'team': require_once PROTECTED_DIR.'team.php'; break;
 
 			case 'insert': require_once PROTECTED_ADMIN_DIR.'insert.php'; break;
