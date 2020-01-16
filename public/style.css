@@ -125,6 +125,10 @@ a:hover
 	text-align: left;
 	font-size: 110%;
 }
+.listacenteralign{
+	text-align: center;
+	font-size: 110%;
+}
 td {
 	font-size: 95%;
 }
