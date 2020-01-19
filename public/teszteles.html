@@ -211,7 +211,7 @@
               </tr>
               <tr>
                 <td width="200"><span style="font-weight:bold">Teszt elnevezése:</span></td>
-                <td>Helyes válasz gombjának tesztje.</td>
+                <td>Kérdés törlése.</td>
               </tr>
               <tr>
                 <td width="200"><span style="font-weight:bold">Teszt elvégzésének dátuma:</span></td>
@@ -236,6 +236,41 @@
               <tr>
                 <td width="200"><span style="font-weight:bold">Hibajavítás:</span></td>
                 <td>A tábla neve el volt írva. `question` -> `questions`</td>
+              </tr>
+            </table><br><br><br><br>
+
+            <table style="width:100%">
+              <tr>
+                <th class="kovlistaleftalign"></th>
+                <th class="kovlistaleftalign"></th>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Teszt elnevezése:</span></td>
+                <td>Üres mező hozzáadása.</td>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Teszt elvégzésének dátuma:</span></td>
+                <td>19/12/12</td>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Tesztelő:</span></td>
+                <td>Bokodi Máté</td>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Elvárt működés:</span></td>
+                <td>Hogy hibaüzenetet kapok az üres mező miatt.</td>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Teszt menete:</span></td>
+                <td>Kérdést adok hozzá az adatbázishoz, de nem töltök ki minden mezőt.</td>
+              </tr>
+              <tr bgcolor="#edcece">
+                <td width="200"><span style="font-weight:bold">Teszt eredmény:</span></td>
+                <td>Beilleszti üres értékekkel a táblába.</td>
+              </tr>
+              <tr>
+                <td width="200"><span style="font-weight:bold">Hibajavítás:</span></td>
+                <td>Vizsgálat empty($mezonev) függvények segítségével.</td>
               </tr>
             </table><br><br><br><br>
         </div><br><br>
